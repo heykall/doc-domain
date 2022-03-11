@@ -1,7 +1,7 @@
 [package]
-name = "yew-wasm-pack-template"
-version = "0.2.0"
-authors = ["Yew Maintainers <maintainers@yew.rs"]
+name = "domain-doc"
+version = "0.1.0"
+authors = ["Domain Developer"]
 edition = "2018"
 
 [lib]
@@ -16,7 +16,7 @@ serde_derive = "1"
 wasm-bindgen = "0.2.58"
 wasm-logger = "0.2"
 wee_alloc = { version = "0.4.4", optional = true }
-yew = "0.17"
+yew = "0.19"
 
 [dev-dependencies]
 wasm-bindgen-test = "0.3"

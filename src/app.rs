@@ -1,358 +1,220 @@
 use log::*;
-use serde_derive::{Deserialize, Serialize};
-use strum::IntoEnumIterator;
-use strum_macros::{EnumIter, ToString};
-use yew::format::Json;
 use yew::prelude::*;
-use yew::services::storage::{Area, StorageService};
+use wasm_bindgen::prelude::*;
 
-const KEY: &str = "yew.todomvc.self";
-
-pub struct App {
-    link: ComponentLink<Self>,
-    storage: StorageService,
-    state: State,
+#[wasm_bindgen(module = "/src/highlight.js")]
+extern "C" {
+  pub fn highlight();
 }
 
-#[derive(Serialize, Deserialize)]
-pub struct State {
-    entries: Vec<Entry>,
-    filter: Filter,
-    value: String,
-    edit_value: String,
-}
-
-#[derive(Serialize, Deserialize)]
-struct Entry {
-    description: String,
-    completed: bool,
-    editing: bool,
-}
-
-pub enum Msg {
-    Add,
-    Edit(usize),
-    Update(String),
-    UpdateEdit(String),
-    Remove(usize),
-    SetFilter(Filter),
-    ToggleAll,
-    ToggleEdit(usize),
-    Toggle(usize),
-    ClearCompleted,
-    Nope,
-}
-
-impl Component for App {
-    type Message = Msg;
-    type Properties = ();
-
-    fn create(_: Self::Properties, link: ComponentLink<Self>) -> Self {
-        let storage = StorageService::new(Area::Local).unwrap();
-        let entries = {
-            if let Json(Ok(restored_entries)) = storage.restore(KEY) {
-                restored_entries
-            } else {
-                Vec::new()
-            }
-        };
-        let state = State {
-            entries,
-            filter: Filter::All,
-            value: "".into(),
-            edit_value: "".into(),
-        };
-        App {
-            link,
-            storage,
-            state,
-        }
-    }
-
-    fn change(&mut self, _props: Self::Properties) -> ShouldRender {
-        false
-    }
-
-    fn update(&mut self, msg: Self::Message) -> ShouldRender {
-        match msg {
-            Msg::Add => {
-                let entry = Entry {
-                    description: self.state.value.clone(),
-                    completed: false,
-                    editing: false,
-                };
-                self.state.entries.push(entry);
-                self.state.value = "".to_string();
-            }
-            Msg::Edit(idx) => {
-                let edit_value = self.state.edit_value.clone();
-                self.state.complete_edit(idx, edit_value);
-                self.state.edit_value = "".to_string();
-            }
-            Msg::Update(val) => {
-                println!("Input: {}", val);
-                self.state.value = val;
-            }
-            Msg::UpdateEdit(val) => {
-                println!("Input: {}", val);
-                self.state.edit_value = val;
-            }
-            Msg::Remove(idx) => {
-                self.state.remove(idx);
-            }
-            Msg::SetFilter(filter) => {
-                self.state.filter = filter;
-            }
-            Msg::ToggleEdit(idx) => {
-                self.state.edit_value = self.state.entries[idx].description.clone();
-                self.state.toggle_edit(idx);
-            }
-            Msg::ToggleAll => {
-                let status = !self.state.is_all_completed();
-                self.state.toggle_all(status);
-            }
-            Msg::Toggle(idx) => {
-                self.state.toggle(idx);
-            }
-            Msg::ClearCompleted => {
-                self.state.clear_completed();
-            }
-            Msg::Nope => {}
-        }
-        self.storage.store(KEY, Json(&self.state.entries));
-        true
-    }
-
-    fn view(&self) -> Html {
+#[function_component(App)]
+pub fn app() -> Html {
+  // let dump = Json();
+  
+  
+  {
+      use_effect(move || {
         info!("rendered!");
-        html! {
-            <div class="todomvc-wrapper">
-                <section class="todoapp">
-                    <header class="header">
-                        <h1>{ "todos" }</h1>
-                        { self.view_input() }
-                    </header>
-                    <section class="main">
-                        <input class="toggle-all" type="checkbox" checked=self.state.is_all_completed() onclick=self.link.callback(|_| Msg::ToggleAll) />
-                        <ul class="todo-list">
-                            { for self.state.entries.iter().filter(|e| self.state.filter.fit(e))
-                                .enumerate()
-                                .map(|val| self.view_entry(val)) }
-                        </ul>
-                    </section>
-                    <footer class="footer">
-                        <span class="todo-count">
-                            <strong>{ self.state.total() }</strong>
-                            { " item(s) left" }
-                        </span>
-                        <ul class="filters">
-                            { for Filter::iter().map(|flt| self.view_filter(flt)) }
-                        </ul>
-                        <button class="clear-completed" onclick=self.link.callback(|_| Msg::ClearCompleted)>
-                            { format!("Clear completed ({})", self.state.total_completed()) }
-                        </button>
-                    </footer>
-                </section>
-                <footer class="info">
-                    <p>{ "Double-click to edit a todo" }</p>
-                    <p>{ "Written by " }<a href="https://github.com/DenisKolodin/" target="_blank">{ "Denis Kolodin" }</a></p>
-                    <p>{ "Part of " }<a href="http://todomvc.com/" target="_blank">{ "TodoMVC" }</a></p>
-                </footer>
-            </div>
-        }
+          // Make a call to DOM API after component is rendered
+          highlight();
+
+            // Perform the cleanup
+            || highlight()
+        });
     }
-}
+        
+    
+    html! {
+        <>
+        <pre><code class="json">{r#"{
+          "FirstName": "John",
+          "LastName": "Doe",
+          "Age": 43,
+          "Address": {
+              "Street": "Downing Street 10",
+              "City": "London",
+              "Country": "Great Britain"
+          },
+          "PhoneNumbers": [
+              "+44 1234567",
+              "+44 2345678"
+          ]
+      }"#
+       }</code></pre>
 
-impl App {
-    fn view_filter(&self, filter: Filter) -> Html {
-        let flt = filter.clone();
-
-        html! {
-            <li>
-                <a class=if self.state.filter == flt { "selected" } else { "not-selected" }
-                   href=&flt
-                   onclick=self.link.callback(move |_| Msg::SetFilter(flt.clone()))>
-                    { filter }
-                </a>
-            </li>
-        }
-    }
-
-    fn view_input(&self) -> Html {
-        html! {
-            // You can use standard Rust comments. One line:
-            // <li></li>
-            <input class="new-todo"
-                   placeholder="What needs to be done?"
-                   value=&self.state.value
-                   oninput=self.link.callback(|e: InputData| Msg::Update(e.value))
-                   onkeypress=self.link.callback(|e: KeyboardEvent| {
-                       if e.key() == "Enter" { Msg::Add } else { Msg::Nope }
-                   }) />
-            /* Or multiline:
-            <ul>
-                <li></li>
-            </ul>
-            */
-        }
-    }
-
-    fn view_entry(&self, (idx, entry): (usize, &Entry)) -> Html {
-        let mut class = "todo".to_string();
-        if entry.editing {
-            class.push_str(" editing");
-        }
-        if entry.completed {
-            class.push_str(" completed");
-        }
-
-        html! {
-            <li class=class>
-                <div class="view">
-                    <input class="toggle" type="checkbox" checked=entry.completed onclick=self.link.callback(move |_| Msg::Toggle(idx)) />
-                    <label ondblclick=self.link.callback(move |_| Msg::ToggleEdit(idx))>{ &entry.description }</label>
-                    <button class="destroy" onclick=self.link.callback(move |_| Msg::Remove(idx)) />
+       <pre><code class="arcade">{"Hello World"
+     }</code></pre>
+        <div class="relative bg-white overflow-hidden">
+          <div class="max-w-7xl mx-auto">
+            <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+              <svg class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                <polygon points="50,0 100,0 50,100 0,100" />
+              </svg>
+        
+              <div>
+                <div class="relative pt-6 px-4 sm:px-6 lg:px-8">
+                  <nav class="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
+                    <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
+                      <div class="flex items-center justify-between w-full md:w-auto">
+                        <a href="#">
+                          <span class="sr-only">{"Workflow"}</span>
+                          <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"/>
+                        </a>
+                        <div class="-mr-2 flex items-center md:hidden">
+                          <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
+                            <span class="sr-only">{"Open main menu"}</span>
+                            
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
+                      <a href="#test" class="font-medium text-gray-500 hover:text-gray-900">{"Test"}</a>
+        
+                      <a href="#" class="font-medium text-gray-500 hover:text-gray-900">{"Features"}</a>
+        
+                      <a href="#" class="font-medium text-gray-500 hover:text-gray-900">{"Marketplace"}</a>
+        
+                      <a href="#" class="font-medium text-gray-500 hover:text-gray-900">{"Company"}</a>
+        
+                      <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">{"Log in"}</a>
+                    </div>
+                  </nav>
                 </div>
-                { self.view_entry_edit_input((&idx, &entry)) }
-            </li>
-        }
-    }
 
-    fn view_entry_edit_input(&self, (idx, entry): (&usize, &Entry)) -> Html {
-        let idx = *idx;
-        if entry.editing {
-            html! {
-                <input class="edit"
-                       type="text"
-                       value=&entry.description
-                       oninput=self.link.callback(move |e: InputData| Msg::UpdateEdit(e.value))
-                       onblur=self.link.callback(move |_| Msg::Edit(idx))
-                       onkeypress=self.link.callback(move |e: KeyboardEvent| {
-                          if e.key() == "Enter" { Msg::Edit(idx) } else { Msg::Nope }
-                       }) />
-            }
-        } else {
-            html! { <input type="hidden" /> }
-        }
-    }
-}
+                // <div>{.ToString()}</div>
 
-#[derive(EnumIter, ToString, Clone, PartialEq, Serialize, Deserialize)]
-pub enum Filter {
-    All,
-    Active,
-    Completed,
-}
-
-impl<'a> Into<Href> for &'a Filter {
-    fn into(self) -> Href {
-        match *self {
-            Filter::All => "#/".into(),
-            Filter::Active => "#/active".into(),
-            Filter::Completed => "#/completed".into(),
-        }
-    }
-}
-
-impl Filter {
-    fn fit(&self, entry: &Entry) -> bool {
-        match *self {
-            Filter::All => true,
-            Filter::Active => !entry.completed,
-            Filter::Completed => entry.completed,
-        }
-    }
-}
-
-impl State {
-    fn total(&self) -> usize {
-        self.entries.len()
-    }
-
-    fn total_completed(&self) -> usize {
-        self.entries
-            .iter()
-            .filter(|e| Filter::Completed.fit(e))
-            .count()
-    }
-
-    fn is_all_completed(&self) -> bool {
-        let mut filtered_iter = self
-            .entries
-            .iter()
-            .filter(|e| self.filter.fit(e))
-            .peekable();
-
-        if filtered_iter.peek().is_none() {
-            return false;
-        }
-
-        filtered_iter.all(|e| e.completed)
-    }
-
-    fn toggle_all(&mut self, value: bool) {
-        for entry in self.entries.iter_mut() {
-            if self.filter.fit(entry) {
-                entry.completed = value;
-            }
-        }
-    }
-
-    fn clear_completed(&mut self) {
-        let entries = self
-            .entries
-            .drain(..)
-            .filter(|e| Filter::Active.fit(e))
-            .collect();
-        self.entries = entries;
-    }
-
-    fn toggle(&mut self, idx: usize) {
-        let filter = self.filter.clone();
-        let mut entries = self
-            .entries
-            .iter_mut()
-            .filter(|e| filter.fit(e))
-            .collect::<Vec<_>>();
-        let entry = entries.get_mut(idx).unwrap();
-        entry.completed = !entry.completed;
-    }
-
-    fn toggle_edit(&mut self, idx: usize) {
-        let filter = self.filter.clone();
-        let mut entries = self
-            .entries
-            .iter_mut()
-            .filter(|e| filter.fit(e))
-            .collect::<Vec<_>>();
-        let entry = entries.get_mut(idx).unwrap();
-        entry.editing = !entry.editing;
-    }
-
-    fn complete_edit(&mut self, idx: usize, val: String) {
-        let filter = self.filter.clone();
-        let mut entries = self
-            .entries
-            .iter_mut()
-            .filter(|e| filter.fit(e))
-            .collect::<Vec<_>>();
-        let entry = entries.get_mut(idx).unwrap();
-        entry.description = val;
-        entry.editing = !entry.editing;
-    }
-
-    fn remove(&mut self, idx: usize) {
-        let idx = {
-            let filter = self.filter.clone();
-            let entries = self
-                .entries
-                .iter()
-                .enumerate()
-                .filter(|&(_, e)| filter.fit(e))
-                .collect::<Vec<_>>();
-            let &(idx, _) = entries.get(idx).unwrap();
-            idx
-        };
-        self.entries.remove(idx);
+                
+        
+                
+                <div class="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+                  <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+                    <div class="px-5 pt-4 flex items-center justify-between">
+                      <div>
+                        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt=""/>
+                      </div>
+                      <div class="-mr-2">
+                        <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                          <span class="sr-only">{"Close main menu"}</span>
+                          
+                          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="px-2 pt-2 pb-3 space-y-1">
+                      <a href="#test" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">{"Test"}</a>
+        
+                      <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">{"Features"}</a>
+        
+                      <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">{"Marketplace"}</a>
+        
+                      <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">{"Company"}</a>
+                    </div>
+                    <a href="#" class="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100">{" Log in "}</a>
+                  </div>
+                </div>
+              </div>
+        
+              <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+                <div class="sm:text-center lg:text-left">
+                  <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                    <span class="block xl:inline">{"Data to enrich your"}</span>
+                    <span class="block text-indigo-600 xl:inline">{"online business"}</span>
+                  </h1>
+                  <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">{"Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua"}</p>
+                  <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                    <div class="rounded-md shadow">
+                      <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">{" Get started "}</a>
+                    </div>
+                    <div class="mt-3 sm:mt-0 sm:ml-3">
+                      <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10">{" Live demo "}</a>
+                    </div>
+                  </div>
+                </div>
+              </main>
+            </div>
+          </div>
+          <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt=""/>
+          </div>
+        </div>
+        <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt=""/>
+          </div>
+          <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt=""/>
+          </div>
+          <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt=""/>
+          </div>
+          <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt=""/>
+          </div>
+          <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt=""/>
+          </div>
+          <div id="test" class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt=""/>
+          </div>
+        </>
     }
 }
+
+// pub struct Basic {}
+
+// pub enum Msg {}
+
+// impl Component for Basic {
+//     type Message = Msg;
+//     type Properties = ();
+
+//     fn create(_ctx: &Context<Self>) -> Self {
+//         Basic {}
+//     }
+
+//     fn update(&mut self, _ctx: &Context<Self>, _msg: Self::Message) -> bool {
+//         true
+//     }
+
+//     fn rendered(&mut self, _ctx: &Context<Self>, first_render: bool) {
+//         if first_render {
+//             // ConsoleService::info("This is first render in app tab settings");
+//             // self.link.send_message(Msg::RequestAppList);
+//             highlight();
+//         }
+//     }
+
+//     fn changed(&mut self, _ctx: &Context<Self>) -> bool {
+//         false
+//     }
+
+//     fn view(&self, _ctx: &Context<Self>) -> Html {
+//         html! {
+//             <>
+//             <pre><code class="json">{r#"{
+//                           "FirstName": "John",
+//                           "LastName": "Doe",
+//                           "Age": 43,
+//                           "Address": {
+//                               "Street": "Downing Street 10",
+//                               "City": "London",
+//                               "Country": "Great Britain"
+//                           },
+//                           "PhoneNumbers": [
+//                               "+44 1234567",
+//                               "+44 2345678"
+//                           ]
+//                       }"#
+//                        }</code></pre>
+                
+//                        <pre><code class="arcade">{"Hello World"
+//                      }</code></pre>
+//             </>
+//         }
+//     }
+// }

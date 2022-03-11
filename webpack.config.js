@@ -13,19 +13,15 @@ module.exports = (env, argv) => {
     entry: './bootstrap.js',
     output: {
       path: distPath,
-      filename: "todomvc.js",
-      webassemblyModuleFilename: "todomvc.wasm"
+      filename: "domain-documentation.js",
+      webassemblyModuleFilename: "domain-documentation.wasm"
     },
     module: {
       rules: [
         {
-          test: /\.s[ac]ss$/i,
-          use: [
-            'style-loader',
-            'css-loader',
-            'sass-loader',
-          ],
-        },
+          test: /\.(sass|less|css)$/,
+          loaders: ['style-loader', 'css-loader', 'sass-loader']
+        }
       ],
     },
     plugins: [
