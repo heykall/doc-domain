@@ -488,7 +488,7 @@ pub fn app() -> Html {
 
                     
                     <div class="relative items-center w-full mx-auto bg-gray-500">
-                    // Request body section
+                      // Request body section
                       <div>
                         <div class="p-4">
                           <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
@@ -567,119 +567,386 @@ pub fn app() -> Html {
               
               // Get Client Section
               <div class="grid grid-cols-2">
-                  <div class="relative items-center w-full mx-auto">
-                    <div class="grid grid-cols-1 ">
+                // description
+                <div class="relative items-center w-full mx-auto">
+                  <div class="grid grid-cols-1 ">
                     <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
-                        <div class="p-4">
-                          <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Get clients"}</h4>
-                          <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-violet-400 rounded-full">{"GET"}</span>
-                          <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/clients"}</span>
-                          <p class="mt-3 text-base leading-relaxed text-gray-500">
-                          <span class="mt-3 text-base leading-relaxed text-gray-500">{"Retrieve clients (applications and SSO integrations) matching provided filters. A list of fields to include or exclude may also be specified."}</span>
-                          </p>
-                          <p class="mt-3 text-base leading-relaxed text-gray-500">
-                          {"Note:"}
-                          </p>
-                          <p class="mt-3 text-base leading-relaxed text-gray-500">
-                          {"Note:"}
-                          </p>  
-                          </div>
+                      <div class="p-4">
+                        <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Get clients"}</h4>
+                        <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-violet-400 rounded-full">{"GET"}</span>
+                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/clients"}</span>
+                        <p class="mt-3 text-base leading-relaxed text-gray-500">
+                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"Retrieve clients (applications and SSO integrations) matching provided filters. A list of fields to include or exclude may also be specified."}</span>
+                        </p>
+                        <p class="mt-3 text-base leading-relaxed text-gray-500">
+                        {"Note:"}
+                        </p>
+                        <p class="mt-3 text-base leading-relaxed text-gray-500">
+                        {"Note:"}
+                        </p>  
                         </div>
                       </div>
                     </div>
-
-                    
-                    <div class="relative items-center w-full mx-auto bg-gray-500">
+                </div>
+                
+                // response section
+                <div class="relative items-center w-full mx-auto bg-gray-500">
+                  // Request body section
+                  <div>
                     <div class="p-4">
-                    <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
                     </div>
-                      <pre>
-                        <code class="json text-xs">
-                          {r#"
-                          [
-                            {
-                              "client_id": "61cd1acd5498ea1bc1a60072",
-                              "tenant": "dev-jefri",
-                              "name": "Default App",
-                              "description": "",
-                              "global": false,
-                              "client_secret": "string",
-                              "app_type": "generic",
-                              "logo_uri": "string url",
-                              "is_first_party": false,
-                              "oidc_conformant": false,
-                              "callbacks": [
-                                ""
-                              ],
-                              "allowed_origins": [
-                                ""
-                              ],
-                              "web_origins": [
-                                ""
-                              ],
-                              "client_aliases": [
-                                ""
-                              ],
-                              "allowed_clients": [
-                                ""
-                              ],
-                              "allowed_logout_urls": [
-                                ""
-                              ],
-                              "grant_types": [
-                                "implicit",
-                                "authorization_code",
-                                "refresh_token",
-                                "client_credentials"
-                              ],
-                              "jwt_configuration": {
-                                "lifetime_in_seconds": 36000,
-                                "secret_encoded": false
+                    <pre>
+                      <code class="json text-lg">
+                        {r#"
+
+
+
+                        No Request Body Required
+                        
+                        
+
+                        "#}
+                        </code>
+                    </pre>          
+                  </div>
+                  
+                  // Request Headers Section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-xs">
+                        {r#"
+
+
+                        "access_token": "value from field 'token' on method POST /login"
+
+                        
+                        "#}
+                        </code>
+                    </pre>        
+                  </div>
+                  
+                  // Response section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-xs">
+                        {r#"
+
+                        Status Code 200 - Ok
+
+                        {
+                          "message": "Succesfully get all Applications",
+                          "data": [
+                              {
+                                  "id": "AaiyAPdpYdesoKnqjj8HJqRn4T5titww",
+                                  "name": "name app",
+                                  "client_id": "client id app",
+                                  "app_type": "app type",
+                                  "logo_url": "url logo"
                               },
-                              "signing_keys": [
-                                {
-                                  "cert": "string",
-                                  "pkcs7": "string",
-                                  "subject": "deprecated"
-                                }
-                              ],
-                              "sso": false,
-                              "sso_disabled": false,
-                              "cross_origin_auth": false,
-                              "cross_origin_loc": "",
-                              "custom_login_page_on": false,
-                              "custom_login_page": "",
-                              "custom_login_page_preview": "",
-                              "form_template": "",
-                              "token_endpoint_auth_method": "none",
-                              "initiate_login_uri": "",
-                              "is_token_endpoint_ip_header_trusted": false,
-                              "refresh_token": {
-                                "expiration_type": "non-expiring",
-                                "leeway": 0,
-                                "infinite_token_lifetime": false,
-                                "infinite_idle_token_lifetime": false,
-                                "token_lifetime": 2592000,
-                                "idle_token_lifetime": 1296000,
-                                "rotation_type": "non-rotating"
+                              {
+                                  "id": "kmzWay87dsdDSdsadffsSFGWWWfsaggS",
+                                  "name": "name app",
+                                  "client_id": "client id app",
+                                  "app_type": "app type",
+                                  "logo_url": "url logo"
                               },
-                              "organization_usage": "deny",
-                              "organization_require_behavior": "no_prompt",
-                              "encrypted": true,
-                              "callback_url_template": false
+                          ]
+                        }
+                                  
+                        Status Code 500 - Internal Server Error
+                        
+                        {
+                          "message": "Internal Server Error",
+                          "data": ""
+                        }
+
+                        "#}
+                        </code>
+                    </pre>        
+                  </div>
+
+                </div>
+              </div>
+
+              // Post Client Section
+              <div class="grid grid-cols-2">
+                // description
+                <div class="relative items-center w-full mx-auto">
+                  <div class="grid grid-cols-1 ">
+                    <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
+                      <div class="p-4">
+                        <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Post clients"}</h4>
+                        <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-green-400 rounded-full">{"POST"}</span>
+                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/clients"}</span>
+                        <p class="mt-3 text-base leading-relaxed text-gray-500">
+                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"Create a new client (application)."}</span>
+                        </p>
+                        <p class="mt-3 text-base leading-relaxed text-gray-500">
+                        {"Note: We recommend leaving the `client_secret` parameter unspecified to allow the generation of a safe secret."}
+                        </p>
+                        <p class="mt-3 bg-yellow-500 text-base p-4 leading-relaxed text-gray-500">
+                        {"SSO Integrations created via this endpoint will accept login requests and share user profile information."}
+                        </p>  
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                
+                // response section
+                <div class="relative items-center w-full mx-auto bg-gray-500">
+                  // Request body section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
+                      <h4 class="text-base font-medium leading-none text-yellow-500 tracking-tighter text-white lg:text-base ">{"Request Body Type : application/x-www-form-urlencoded "}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-xs">
+                        {r#"
+                        {
+                            "name": "name app",
+                            "app_type": "type of app: default is 'custom app'"
+                        }
+                        "#}
+                        </code>
+                    </pre>          
+                  </div>
+                  
+                  // Request Headers Section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-xs">
+                        {r#"
+
+
+                        "access_token": "value from field 'token' on method POST /login"
+
+                        
+                        "#}
+                        </code>
+                    </pre>        
+                  </div>
+                  
+                  // Response section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-xs">
+                        {r#"
+
+                        Status Code 201 - Created
+
+                        {
+                          "message": "Successfullly create Application",
+                          "data": {
+                              "id": 1,
+                              "name": "name of application",
+                              "client_id": "auto generated client id",
+                              "app_type": "custom app",
+                              "domain": "concat from tenant_name and tenant region",
+                              "client_secret": "auto generated client secret",
+                              "description": "description of application",
+                              "logo_url": "url logo of application",
+                              "token_auth_method": "default 'Post'",
+                              "app_login_url": "url app login",
+                              "callback_url": "url callback",
+                              "logout_url": "url logout",
+                              "web_origin": "url web origin",
+                              "cors": "url cors",
+                              "id_token_exp": "default integer",
+                              "reuse_interval": "default integer",
+                              "abs_lifetime": "default integer",
+                              "inactivity_lifetime": "default integer",
+                              "tenant_id": id tenant
                             }
-                          ]                          
-                          "#}
-                          </code>
-                      </pre>        
-                    </div>
+                        }
+                                  
+                        Status Code 400 - Bad Request
+                        
+                        {
+                          "message": "Parse error",
+                          "data": ""
+                        }
+
+                        Status Code 500 - Internal Server Error
+                        
+                        {
+                          "message": "Internal Server Error",
+                          "data": ""
+                        }
+
+                        "#}
+                        </code>
+                    </pre>        
+                  </div>
+
+                </div>
               </div>
 
 
+              // Get Detail Client Section
+              <div class="grid grid-cols-2">
+                // description
+                <div class="relative items-center w-full mx-auto">
+                  <div class="grid grid-cols-1 ">
+                    <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
+                      <div class="p-4">
+                        <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Get Details a client"}</h4>
+                        <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-violet-400 rounded-full">{"GET"}</span>
+                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/clients/{id}"}</span>
+                        <p class="mt-3 text-base leading-relaxed text-gray-500">
+                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"Retrieve client details. A list of fields to include or exclude may also be specified."}</span>
+                        </p>
+                        <p class="mt-3 text-base leading-relaxed text-gray-500">
+                        {"Note: "}
+                        </p> 
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                
+                // response section
+                <div class="relative items-center w-full mx-auto bg-gray-500">
+                  // Request body section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-lg">
+                        {r#"
+
+
+
+                        No Request Body Required
+                        
+                        
+
+                        "#}
+                        </code>
+                    </pre>      
+                  </div>
+                  
+                  // Request Headers Section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-xs">
+                        {r#"
+
+
+                        "access_token": "value from field 'token' on method POST /login"
+
+                        
+                        "#}
+                        </code>
+                    </pre>        
+                  </div>
+                  
+                  // request parameter section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Parameters Example"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-xs">
+                        {r#"
+
+                        endpoint: /api/v2/clients/{id}
+                        example: /api/v2/clients/AaiyAPdpYdesoKnqjj8HJqRn4T5titww
+
+
+                        "id": "id of app"
+
+                        
+                        "#}
+                        </code>
+                    </pre>        
+                  </div>
+                  
+                  // Response section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-xs">
+                        {r#"
+
+                        Status Code 200 - Ok
+
+                        {
+                          "message": "Successfullly create Application",
+                          "data": {
+                              "id": "AaiyAPdpYdesoKnqjj8HJqRn4T5titww",
+                              "name": "name of application",
+                              "client_id": "auto generated client id",
+                              "app_type": "custom app",
+                              "domain": "concat from tenant_name and tenant region",
+                              "client_secret": "auto generated client secret",
+                              "description": "description of application",
+                              "logo_url": "url logo of application",
+                              "token_auth_method": "default 'Post'",
+                              "app_login_url": "url app login",
+                              "callback_url": "url callback",
+                              "logout_url": "url logout",
+                              "web_origin": "url web origin",
+                              "cors": "url cors",
+                              "id_token_exp": "default integer",
+                              "reuse_interval": "default integer",
+                              "abs_lifetime": "default integer",
+                              "inactivity_lifetime": "default integer",
+                              "tenant_id": id tenant
+                            }
+                        }
+                                  
+                        Status Code 403 - Forbidden
+                        
+                        {
+                          "message": "You dont have access to this data",
+                          "data": ""
+                        }
+
+                        Status Code 404 - Not Found
+                        
+                        {
+                          "message": "Application not found",
+                          "data": ""
+                        }
+
+                        Status Code 500 - Internal Server Error
+                        
+                        {
+                          "message": "Internal Server Error",
+                          "data": ""
+                        }
+                        "#}
+                        </code>
+                    </pre>        
+                  </div>
+
+                </div>
+              </div>
+
+
+            // Layout
             </div>
           </div>
-            // <div class="col-span-2">{"03"}</div>
-    </>
- 
-    }
+  </>
+
+  }
 }
