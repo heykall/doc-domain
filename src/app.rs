@@ -9,10 +9,8 @@ extern "C" {
 
 #[function_component(App)]
 pub fn app() -> Html {
-  // let dump = Json();
-  
-  
-  {
+
+    {
       use_effect(move || {
         info!("rendered!");
           // Make a call to DOM API after component is rendered
@@ -25,143 +23,455 @@ pub fn app() -> Html {
         
     
     html! {
-        <>
-        <pre><code class="json">{r#"{
-          "FirstName": "John",
-          "LastName": "Doe",
-          "Age": 43,
-          "Address": {
-              "Street": "Downing Street 10",
-              "City": "London",
-              "Country": "Great Britain"
-          },
-          "PhoneNumbers": [
-              "+44 1234567",
-              "+44 2345678"
-          ]
-      }"#
-       }</code></pre>
+    <>
+        // <div class="flex h-screen overflow-hidden bg-white rounded-lg">
+        //     <div class="hidden md:flex md:flex-shrink-0">
+        //         <div class="flex flex-col w-64">
+        //         <div class="
+        //         flex flex-col flex-grow
+        //         pt-5
+        //         overflow-y-auto
+        //         bg-white
+        //         border-r border-gray-50
+        //     ">
+        //             <div class="flex flex-col items-center flex-shrink-0 px-4">
+        //             <a href="./index.html" class="px-8 text-left focus:outline-none">
+        //                 <h2 class="
+        //             block
+        //             p-2
+        //             text-xl
+        //             font-medium
+        //             tracking-tighter
+        //             text-gray-900
+        //             transition
+        //             duration-500
+        //             ease-in-out
+        //             transform
+        //             cursor-pointer
+        //             hover:text-gray-900
+        //             "> {"wickedblocks"} </h2>
+        //             </a>
+        //             <button class="hidden rounded-lg focus:outline-none focus:shadow-outline">
+        //                 <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+        //                 <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+        //                 <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+        //                 </svg>
+        //             </button>
+        //             </div>
+        //             <div class="flex flex-col flex-grow px-4 mt-5">
+        //             <nav class="flex-1 space-y-1 bg-white">
+        //                 <ul>
+        //                 <li>
+        //                     <a class="
+        //                 inline-flex
+        //                 items-center
+        //                 w-full
+        //                 px-4
+        //                 py-2
+        //                 mt-1
+        //                 text-base text-gray-900
+        //                 transition
+        //                 duration-500
+        //                 ease-in-out
+        //                 transform
+        //                 rounded-lg
+        //                 bg-gray-50
+        //                 focus:shadow-outline
+        //                 " white="" href="#">
+        //                     <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        //                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+        //                     </svg>
+        //                     <span class="ml-4"> {"Overview"}</span>
+        //                     </a>
+        //                 </li>
+        //                 <li>
+        //                     <a class="
+        //                 inline-flex
+        //                 items-center
+        //                 w-full
+        //                 px-4
+        //                 py-2
+        //                 mt-1
+        //                 text-base text-gray-900
+        //                 transition
+        //                 duration-500
+        //                 ease-in-out
+        //                 transform
+        //                 rounded-lg
+        //                 focus:shadow-outline
+        //                 hover:bg-gray-50
+        //                 " href="#">
+        //                     <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        //                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+        //                     </svg>
+        //                     <span class="ml-4">{"Chat"}</span>
+        //                     </a>
+        //                 </li>
+        //                 <li>
+        //                     <a class="
+        //                 inline-flex
+        //                 items-center
+        //                 w-full
+        //                 px-4
+        //                 py-2
+        //                 mt-1
+        //                 text-base text-gray-900
+        //                 transition
+        //                 duration-500
+        //                 ease-in-out
+        //                 transform
+        //                 rounded-lg
+        //                 focus:shadow-outline
+        //                 hover:bg-gray-50
+        //                 " href="#">
+        //                     <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        //                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+        //                     </svg>
+        //                     <span class="ml-4">{"User"}</span>
+        //                     </a>
+        //                 </li>
+        //                 <li>
+        //                     <a class="
+        //                 inline-flex
+        //                 items-center
+        //                 w-full
+        //                 px-4
+        //                 py-2
+        //                 mt-1
+        //                 text-base text-gray-900
+        //                 transition
+        //                 duration-500
+        //                 ease-in-out
+        //                 transform
+        //                 rounded-lg
+        //                 focus:shadow-outline
+        //                 hover:bg-gray-50
+        //                 " href="#"><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        //                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+        //                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+        //                     </svg>
+        //                     <span class="ml-4">{"Settings"}</span></a>
+        //                 </li>
+        //                 </ul>
+        //                 <p class="px-4 pt-4 font-medium text-gray-900 uppercase"> {"Shortcuts"} </p>
+        //                 <ul>
+        //                 <li>
+        //                     <a class="
+        //                 inline-flex
+        //                 items-center
+        //                 w-full
+        //                 px-4
+        //                 py-2
+        //                 mt-1
+        //                 text-base text-gray-900
+        //                 transition
+        //                 duration-500
+        //                 ease-in-out
+        //                 transform
+        //                 rounded-lg
+        //                 focus:shadow-outline
+        //                 hover:bg-gray-50
+        //                 " white="" href="#">
+        //                     <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        //                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+        //                     </svg>
+        //                     <span class="ml-4"> {"Tasks"}</span>
+        //                     </a>
+        //                 </li>
+        //                 <li>
+        //                     <a class="
+        //                 inline-flex
+        //                 items-center
+        //                 w-full
+        //                 px-4
+        //                 py-2
+        //                 mt-1
+        //                 text-base text-gray-900
+        //                 transition
+        //                 duration-500
+        //                 ease-in-out
+        //                 transform
+        //                 rounded-lg
+        //                 focus:shadow-outline
+        //                 hover:bg-gray-50
+        //                 " white="" href="#">
+        //                     <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        //                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+        //                     </svg>
+        //                     <span class="ml-4"> {"Reports"}</span>
+        //                     </a>
+        //                 </li>
+        //                 <li>
+        //                     <a class="
+        //                 inline-flex
+        //                 items-center
+        //                 w-full
+        //                 px-4
+        //                 py-2
+        //                 mt-1
+        //                 text-base text-gray-900
+        //                 transition
+        //                 duration-500
+        //                 ease-in-out
+        //                 transform
+        //                 rounded-lg
+        //                 focus:shadow-outline
+        //                 hover:bg-gray-50
+        //                 " white="" href="#">
+        //                     <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        //                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path>
+        //                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
+        //                     </svg>
+        //                     <span class="ml-4"> {"Dashboard"}</span>
+        //                     </a>
+        //                 </li>
+        //                 </ul>
+        //             </nav>
+        //             </div>
+        //             <div class="flex flex-shrink-0 p-4 px-4 bg-gray-50">
+        //             <a href="#" class="flex-shrink-0 block w-full group">
+        //                 <div class="flex items-center">
+        //                 <div>
+        //                     <img class="inline-block rounded-full h-9 w-9" src="./images/wickedlabslogo.jpg" alt=""/>
+        //                 </div>
+        //                 <div class="ml-3">
+        //                     <p class="text-sm font-medium text-gray-900">{"Wicked Labs"}</p>
+        //                 </div>
+        //                 </div>
+        //             </a>
+        //             </div>
+        //         </div>
+        //         </div>
+        //     </div>
+        //     <div class="flex flex-col flex-1 w-0 overflow-hidden">
+        //         <main class="relative flex-1 overflow-y-auto focus:outline-none">
+        //         <div class="py-6">
+        //             <div class="px-4 mx-auto max-w-7xl sm:px-6 md:px-8">
+        //             <h1 class="text-lg text-neutral-600">{" Here is where you put your stuff "}</h1>
+        //             </div>
+        //             <div class="px-4 mx-auto max-w-7xl sm:px-6 md:px-8">
+        //             // <!-- Put your content here -->
+        //             <pre>
+        //                 <code class="json">
+        //                     {r#"
+        //                     {
+        //                         "FirstName": "John",
+        //                         "LastName": "Doe",
+        //                         "Age": 43,
+        //                         "Address": {
+        //                             "Street": "Downing Street 10",
+        //                             "City": "London",
+        //                             "Country": "Great Britain"
+        //                         },
+        //                         "PhoneNumbers": [
+        //                             "+44 1234567",
+        //                             "+44 2345678"
+        //                         ]
+        //                     }
+        //                     "#}
+        //                 </code>
+        //             </pre>
 
-       <pre><code class="arcade">{"Hello World"
-     }</code></pre>
-        <div class="relative bg-white overflow-hidden">
-          <div class="max-w-7xl mx-auto">
-            <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-              <svg class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-                <polygon points="50,0 100,0 50,100 0,100" />
-              </svg>
-        
-              <div>
-                <div class="relative pt-6 px-4 sm:px-6 lg:px-8">
-                  <nav class="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
-                    <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
-                      <div class="flex items-center justify-between w-full md:w-auto">
-                        <a href="#">
-                          <span class="sr-only">{"Workflow"}</span>
-                          <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"/>
-                        </a>
-                        <div class="-mr-2 flex items-center md:hidden">
-                          <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
-                            <span class="sr-only">{"Open main menu"}</span>
-                            
-                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
-                          </button>
+        //             <pre>
+        //                 <code class="javascript">
+        //                     {r#"
+        //                     const value = "value";
+        //                     const number = 1;
+        //                     if (value) {
+        //                         console.log(number)
+        //                     } else {
+        //                         console.log(value)
+        //                     }
+        //                     "#}
+        //                 </code>
+        //             </pre>
+        //             <div class="py-4">
+        //                 <div class="rounded-lg bg-gray-50 h-96"></div>
+        //             </div>
+        //             // <!-- Do not cross the closing tag underneath this coment-->
+        //             </div>
+        //         </div>
+        //         </main>
+        //     </div>
+        // </div>
+        <div class="grid grid-cols-5">
+        <div class="w-full px-6 text-xl text-gray-800 leading-normal bg-gray-300">
+        <div class="block lg:hidden sticky inset-0">
+            <button id="menu-toggle" class="flex w-full justify-end px-3 py-3 bg-white lg:bg-transparent border rounded border-gray-600 hover:border-yellow-600 appearance-none focus:outline-none">
+                <svg class="fill-current h-3 float-right" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                </svg>
+            </button>
+        </div>
+        <div class="w-full sticky inset-0 hidden max-h-64 lg:h-auto overflow-x-hidden overflow-y-auto lg:overflow-y-hidden lg:block mt-0 my-2 lg:my-0 border border-gray-400 lg:border-transparent bg-white shadow lg:shadow-none lg:bg-transparent z-20" style="top:6em;" id="menu-content">
+            <ul class="list-reset py-2 md:py-0">
+                <li class="py-1 md:my-2 hover:bg-yellow-100 lg:hover:bg-transparent border-l-4 border-transparent font-bold border-yellow-600">
+                    <a href="#section1" class="block pl-4 align-middle text-gray-700 no-underline hover:text-yellow-600">
+                        <span class="pb-1 md:pb-0 text-sm">{"Clients"}</span>
+                    </a>
+                </li>
+                <li class="py-1 md:my-2 hover:bg-yellow-100 lg:hover:bg-transparent border-l-4 border-transparent">
+                    <a href="#section2" class="block pl-4 align-middle text-gray-700 no-underline hover:text-yellow-600">
+                        <span class="pb-1 md:pb-0 text-sm">{"Resource Servers"}</span>
+                    </a>
+                </li>
+                <li class="py-1 md:my-2 hover:bg-yellow-100 lg:hover:bg-transparent border-l-4 border-transparent">
+                    <a href="#section3" class="block pl-4 align-middle text-gray-700 no-underline hover:text-yellow-600">
+                        <span class="pb-1 md:pb-0 text-sm">{"Roles"}</span>
+                    </a>
+                </li>
+                <li class="py-1 md:my-2 hover:bg-yellow-100 lg:hover:bg-transparent border-l-4 border-transparent">
+                    <a href="#section4" class="block pl-4 align-middle text-gray-700 no-underline hover:text-yellow-600">
+                        <span class="pb-1 md:pb-0 text-sm">{"User"}</span>
+                    </a>
+                </li>
+
+                <li class="py-1 md:my-2 hover:bg-yellow-100 lg:hover:bg-transparent border-l-4 border-transparent">
+                    <a href="#section5" class="block pl-4 align-middle text-gray-700 no-underline hover:text-yellow-600">
+                        <span class="pb-1 md:pb-0 text-sm">{"Tenants"}</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+            <div class="col-span-4 divide-y-4 divide-gray-700">
+              <div class="grid grid-cols-2">
+                <div class="relative items-center w-full mx-auto">
+                  <div class="grid grid-cols-1 ">
+                    <div class="w-full h-max max-w-lg mx-auto my-4 bg-white shadow-xl rounded-xl">
+                      <div class="p-6">
+                        <h4 class="mt-8 text-2xl font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Introduction"}</h4>
+                        <p class="mt-3 text-base leading-relaxed text-gray-500">
+                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"This document describes the Domain Management API, which is meant to be used by back-end servers or trusted parties performing administrative tasks. Generally speaking, anything that can be done through the Domain dashboard (and more) can also be done through this API.
+                        This API is separate from the publicly accessible Auth0 Authentication API, which is meant to be used by front-ends and untrusted parties.
+                        When using the code samples, requests should be sent with a Content-Type of "}</span>
+                        <span class="mt-3 text-base leading-relaxed text-gray-500 bg-gray-300 javascript">{"application/json."}</span>
+                        <span class="mt-3 text-base leading-relaxed text-gray-500">{" All endpoints accept a maximum payload size of 1 megabyte."}</span>
+                        </p>                        
+                        </div>
+                      </div>
+                </div>
+              </div>
+
+                    
+                    <div class="relative items-center w-full mx-auto bg-gray-500">
+                      
+                    </div>
+              </div>
+
+              <div class="grid grid-cols-2">
+                  <div class="relative items-center w-full mx-auto">
+                    <div class="grid grid-cols-1 ">
+                    <div class="w-full h-max max-w-lg mx-auto my-4 bg-white shadow-xl rounded-xl">
+                        <div class="p-6">
+                          <h4 class="mt-8 text-2xl font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Get clients"}</h4>
+                          <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-violet-400 rounded-full">{"GET"}</span>
+                          <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/clients"}</span>
+                          <p class="mt-3 text-base leading-relaxed text-gray-500">
+                          <span class="mt-3 text-base leading-relaxed text-gray-500">{"Retrieve clients (applications and SSO integrations) matching provided filters. A list of fields to include or exclude may also be specified."}</span>
+                          </p>
+                          <p class="mt-3 text-base leading-relaxed text-gray-500">
+                          {"Note:"}
+                          </p>
+                          <p class="mt-3 text-base leading-relaxed text-gray-500">
+                          {"Note:"}
+                          </p>  
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
-                      <a href="#test" class="font-medium text-gray-500 hover:text-gray-900">{"Test"}</a>
-        
-                      <a href="#" class="font-medium text-gray-500 hover:text-gray-900">{"Features"}</a>
-        
-                      <a href="#" class="font-medium text-gray-500 hover:text-gray-900">{"Marketplace"}</a>
-        
-                      <a href="#" class="font-medium text-gray-500 hover:text-gray-900">{"Company"}</a>
-        
-                      <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">{"Log in"}</a>
-                    </div>
-                  </nav>
-                </div>
 
-                // <div>{.ToString()}</div>
-
-                
-        
-                
-                <div class="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
-                  <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
-                    <div class="px-5 pt-4 flex items-center justify-between">
-                      <div>
-                        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt=""/>
-                      </div>
-                      <div class="-mr-2">
-                        <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                          <span class="sr-only">{"Close main menu"}</span>
-                          
-                          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                          </svg>
-                        </button>
-                      </div>
+                    
+                    <div class="relative items-center w-full mx-auto bg-gray-500">
+                    <h4 class="mt-8 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
+                      <pre>
+                        <code class="json text-xs">
+                          {r#"
+                          [
+                            {
+                              "client_id": "61cd1acd5498ea1bc1a60072",
+                              "tenant": "dev-jefri",
+                              "name": "Default App",
+                              "description": "",
+                              "global": false,
+                              "client_secret": "string",
+                              "app_type": "generic",
+                              "logo_uri": "string url",
+                              "is_first_party": false,
+                              "oidc_conformant": false,
+                              "callbacks": [
+                                ""
+                              ],
+                              "allowed_origins": [
+                                ""
+                              ],
+                              "web_origins": [
+                                ""
+                              ],
+                              "client_aliases": [
+                                ""
+                              ],
+                              "allowed_clients": [
+                                ""
+                              ],
+                              "allowed_logout_urls": [
+                                ""
+                              ],
+                              "grant_types": [
+                                "implicit",
+                                "authorization_code",
+                                "refresh_token",
+                                "client_credentials"
+                              ],
+                              "jwt_configuration": {
+                                "lifetime_in_seconds": 36000,
+                                "secret_encoded": false
+                              },
+                              "signing_keys": [
+                                {
+                                  "cert": "string",
+                                  "pkcs7": "string",
+                                  "subject": "deprecated"
+                                }
+                              ],
+                              "sso": false,
+                              "sso_disabled": false,
+                              "cross_origin_auth": false,
+                              "cross_origin_loc": "",
+                              "custom_login_page_on": false,
+                              "custom_login_page": "",
+                              "custom_login_page_preview": "",
+                              "form_template": "",
+                              "token_endpoint_auth_method": "none",
+                              "initiate_login_uri": "",
+                              "is_token_endpoint_ip_header_trusted": false,
+                              "refresh_token": {
+                                "expiration_type": "non-expiring",
+                                "leeway": 0,
+                                "infinite_token_lifetime": false,
+                                "infinite_idle_token_lifetime": false,
+                                "token_lifetime": 2592000,
+                                "idle_token_lifetime": 1296000,
+                                "rotation_type": "non-rotating"
+                              },
+                              "organization_usage": "deny",
+                              "organization_require_behavior": "no_prompt",
+                              "encrypted": true,
+                              "callback_url_template": false
+                            }
+                          ]                          
+                          "#}
+                          </code>
+                      </pre>        
                     </div>
-                    <div class="px-2 pt-2 pb-3 space-y-1">
-                      <a href="#test" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">{"Test"}</a>
-        
-                      <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">{"Features"}</a>
-        
-                      <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">{"Marketplace"}</a>
-        
-                      <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">{"Company"}</a>
-                    </div>
-                    <a href="#" class="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100">{" Log in "}</a>
-                  </div>
-                </div>
               </div>
-        
-              <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-                <div class="sm:text-center lg:text-left">
-                  <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                    <span class="block xl:inline">{"Data to enrich your"}</span>
-                    <span class="block text-indigo-600 xl:inline">{"online business"}</span>
-                  </h1>
-                  <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">{"Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua"}</p>
-                  <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                    <div class="rounded-md shadow">
-                      <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">{" Get started "}</a>
-                    </div>
-                    <div class="mt-3 sm:mt-0 sm:ml-3">
-                      <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10">{" Live demo "}</a>
-                    </div>
-                  </div>
-                </div>
-              </main>
+
+
             </div>
           </div>
-          <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt=""/>
-          </div>
-        </div>
-        <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt=""/>
-          </div>
-          <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt=""/>
-          </div>
-          <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt=""/>
-          </div>
-          <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt=""/>
-          </div>
-          <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt=""/>
-          </div>
-          <div id="test" class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt=""/>
-          </div>
-        </>
+            // <div class="col-span-2">{"03"}</div>
+    </>
+ 
     }
 }
 

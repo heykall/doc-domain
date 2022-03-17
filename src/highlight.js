@@ -5,4 +5,3 @@ export async function highlight() {
     console.log('highlight')
     return
 }
-
