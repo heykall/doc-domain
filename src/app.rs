@@ -766,7 +766,7 @@ pub fn app() -> Html {
                   <div class="grid grid-cols-1 ">
                     <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
                       <div class="p-4">
-                        <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Post clients"}</h4>
+                        <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Create a client"}</h4>
                         <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-green-400 rounded-full">{"POST"}</span>
                         <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/clients"}</span>
                         <p class="mt-3 text-base leading-relaxed text-gray-500">
@@ -1053,17 +1053,30 @@ pub fn app() -> Html {
                   <div>
                     <div class="p-4">
                       <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
+                      <h4 class="text-base font-medium leading-none text-yellow-500 tracking-tighter text-white lg:text-base ">{"Request Body Type : application/json"}</h4>
                     </div>
                     <pre>
-                      <code class="json text-lg">
+                      <code class="json text-xs">
                         {r#"
-
-
-
-                        No Request Body Required
-                        
-                        
-
+                        {
+                          "name": "name app",
+                          "client_id": "client id app",
+                          "app_type": "type app",
+                          "domain": "domain app",
+                          "client_secret": "updated client secret app",
+                          "description": "description app",
+                          "logo_url": "url logo app",
+                          "token_auth_method": "token auth method app",
+                          "app_login_url": "url app login",
+                          "callback_url": "url callback app",
+                          "logout_url": "url logout app",
+                          "web_origin": "url web origin app",
+                          "cors": "url cors app",
+                          "id_token_exp": integer,
+                          "reuse_interval": integer,
+                          "abs_lifetime": integer,
+                          "inactivity_lifetime": integer,
+                        }
                         "#}
                         </code>
                     </pre>      
@@ -1315,6 +1328,629 @@ pub fn app() -> Html {
                 </div>
               </div>
 
+              // Get Resource Servers Section
+              <div class="grid grid-cols-2">
+                // description
+                <div class="relative items-center w-full mx-auto">
+                  <div class="grid grid-cols-1 ">
+                    <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
+                      <div class="p-4">
+                        <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Get resource servers"}</h4>
+                        <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-violet-400 rounded-full">{"GET"}</span>
+                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/resource-servers"}</span>
+                        <p class="mt-3 text-base leading-relaxed text-gray-500">
+                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"Retrieve "}</span>
+                        <span class="mt-3 text-base leading-relaxed text-violet-500">{"APIs"}</span>
+                        <span class="mt-3 text-base leading-relaxed text-gray-500">{" (also known as resource servers) that you can consume from your authorized applications."}</span>
+                        </p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                
+                // response section
+                <div class="relative items-center w-full mx-auto bg-gray-500">
+                  // Request body section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-lg">
+                        {r#"
+
+
+
+                        No Request Body Required
+                        
+                        
+
+                        "#}
+                        </code>
+                    </pre>      
+                  </div>
+                  
+                  // Request Headers Section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-xs">
+                        {r#"
+
+
+                        "access_token": "value from field 'token' on method POST /login"
+
+                        
+                        "#}
+                        </code>
+                    </pre>        
+                  </div>
+                  
+                  // Response section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-xs">
+                        {r#"
+
+                        Status Code 200 - Ok
+
+                        {
+                          "message": "Api fetched",
+                          "data": [
+                              {
+                                "id": "api id",
+                                "name": "name API",
+                                "api_type": "type API",
+                                "identifier": "url identifier API"
+                              },
+                              {
+                                "id": "api id",
+                                "name": "name API",
+                                "api_type": "type API",
+                                "identifier": "url identifier API"
+                              }
+                            ]
+                        }
+
+                        Status Code 500 - Internal Server Error
+                        
+                        {
+                          "message": "Internal Server Error",
+                          "data": ""
+                        }
+                        "#}
+                        </code>
+                    </pre>        
+                  </div>
+
+                </div>
+              </div>
+
+              // Create Resource Servers Section
+              <div class="grid grid-cols-2">
+                // description
+                <div class="relative items-center w-full mx-auto">
+                  <div class="grid grid-cols-1 ">
+                    <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
+                      <div class="p-4">
+                        <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Create a resource server"}</h4>
+                        <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-green-400 rounded-full">{"POST"}</span>
+                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/resource-server"}</span>
+                        <p class="mt-3 text-base leading-relaxed text-gray-500">
+                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"Create a new API (also known as a resource server)."}</span>
+                        </p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                
+                // response section
+                <div class="relative items-center w-full mx-auto bg-gray-500">
+                  // Request body section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
+                      <h4 class="text-base font-medium leading-none text-yellow-500 tracking-tighter text-white lg:text-base ">{"Request Body Type : application/json"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-xs">
+                        {r#"
+                        {
+                          "name": "name API",
+                          "identifier": "url identifier API",
+                          "sign_algorithm": "signature algorithm for API"
+                        }
+                        "#}
+                        </code>
+                    </pre>          
+                  </div>
+                  
+                  // Request Headers Section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-xs">
+                        {r#"
+
+
+                        "access_token": "value from field 'token' on method POST /login"
+
+                        
+                        "#}
+                        </code>
+                    </pre>        
+                  </div>
+                  
+                  // Response section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-xs">
+                        {r#"
+
+                        Status Code 201 - Created
+
+                        {
+                          "message": "Succesfully create api",
+                          "data": ""
+                        }
+                                  
+                        Status Code 400 - Bad Request
+                        
+                        {
+                          "message": "Parse error",
+                          "data": ""
+                        }
+
+                        Status Code 403 - Forbidden
+                        
+                        {
+                          "message": "You dont have access to this data",
+                          "data": ""
+                        }
+
+                        Status Code 500 - Internal Server Error
+                        
+                        {
+                          "message": "Internal Server Error",
+                          "data": ""
+                        }
+
+                        "#}
+                        </code>
+                    </pre>        
+                  </div>
+
+                </div>
+              </div>
+
+              // Get Detail a Resource Server Section
+              <div class="grid grid-cols-2">
+                // description
+                <div class="relative items-center w-full mx-auto">
+                  <div class="grid grid-cols-1 ">
+                    <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
+                      <div class="p-4">
+                        <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Get Details a resource server"}</h4>
+                        <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-violet-400 rounded-full">{"GET"}</span>
+                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/resource-server/{id}"}</span>
+                        <p class="mt-3 text-base leading-relaxed text-gray-500">
+                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"Retrieve an "}</span>
+                        <span class="mt-3 text-base leading-relaxed text-violet-500">{"APIs"}</span>
+                        <span class="mt-3 text-base leading-relaxed text-gray-500">{" (also known as resource server)."}</span>
+                        </p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                
+                // response section
+                <div class="relative items-center w-full mx-auto bg-gray-500">
+                  // Request body section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-lg">
+                        {r#"
+
+
+
+                        No Request Body Required
+                        
+                        
+
+                        "#}
+                        </code>
+                    </pre>      
+                  </div>
+                  
+                  // Request Headers Section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-xs">
+                        {r#"
+
+
+                        "access_token": "value from field 'token' on method POST /login"
+
+                        
+                        "#}
+                        </code>
+                    </pre>        
+                  </div>
+                  
+                  // request parameter section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Parameters Example"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-xs">
+                        {r#"
+
+                        endpoint: /api/v2/resource-server/{id}
+                        example: /api/v2/resource-server/AaiyAPdpYdesoKnqjj8HJqRn4T5titww
+
+
+                        "id": "id of API"
+
+                        
+                        "#}
+                        </code>
+                    </pre>        
+                  </div>
+                  
+                  // Response section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-xs">
+                        {r#"
+
+                        Status Code 200 - Ok
+
+                        {
+                          "message": "Api loaded",
+                          "data": {
+                            "id": "api id",
+                            "name": "name api",
+                            "api_id": "auto generated id",
+                            "api_type": "Custom API",
+                            "identifier": "url identifier",
+                            "token_exp": integer,
+                            "token_exp_browser": integer,
+                            "sign_algorithm": "algorithm signing",
+                            "rbac": boolean,
+                            "permission_acc_token": boolean,
+                            "allow_skip_user": boolean,
+                            "allow_off_acc": boolean,
+                            "tenant_id": 1
+                          }
+                        }
+                                  
+                        Status Code 403 - Forbidden
+                        
+                        {
+                          "message": "You dont have access to this data",
+                          "data": ""
+                        }
+
+                        Status Code 404 - Not Found
+                        
+                        {
+                          "message": "Api not found",
+                          "data": ""
+                        }
+
+                        Status Code 500 - Internal Server Error
+                        
+                        {
+                          "message": "Internal Server Error",
+                          "data": ""
+                        }
+                        "#}
+                        </code>
+                    </pre>        
+                  </div>
+
+                </div>
+              </div>
+
+              // Patch Update a Resource Server
+              <div class="grid grid-cols-2">
+                // description
+                <div class="relative items-center w-full mx-auto">
+                  <div class="grid grid-cols-1 ">
+                    <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
+                      <div class="p-4">
+                        <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Update a resource server"}</h4>
+                        <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-yellow-400 rounded-full">{"PATCH"}</span>
+                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/resource-servers/{id}"}</span>
+                        <p class="mt-3 text-base leading-relaxed text-gray-500">
+                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"Update an existing "}</span>
+                        <span class="mt-3 text-base leading-relaxed text-violet-500">{"API"}</span>
+                        <span class="mt-3 text-base leading-relaxed text-gray-500">{" (also known as resource server)."}</span>
+                        </p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                
+                // response section
+                <div class="relative items-center w-full mx-auto bg-gray-500">
+                  // Request body section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
+                      <h4 class="text-base font-medium leading-none text-yellow-500 tracking-tighter text-white lg:text-base ">{"Request Body Type : application/json"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-xs">
+                        {r#"
+                        {
+                          "name": "name app",
+                          "token_exp": integer,
+                          "token_exp_browser": integer,
+                          "rbac": boolean,
+                          "permission_acc_token": boolean,
+                          "allow_skip_user": boolean,
+                          "allow_off_acc": boolean,
+                        }
+                        "#}
+                        </code>
+                    </pre>      
+                  </div>
+                  
+                  // Request Headers Section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-xs">
+                        {r#"
+
+
+                        "access_token": "value from field 'token' on method POST /login"
+
+                        
+                        "#}
+                        </code>
+                    </pre>        
+                  </div>
+                  
+                  // request parameter section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Parameters Example"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-xs">
+                        {r#"
+
+                        endpoint: /api/v2/resource-servers/{id}
+                        example: /api/v2/resource-servers/AaiyAPdpYdesoKnqjj8HJqRn4T5titww
+
+
+                        "id": "id of api"
+
+                        
+                        "#}
+                        </code>
+                    </pre>        
+                  </div>
+                  
+                  // Response section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-xs">
+                        {r#"
+
+                        Status Code 200 - Ok
+
+                        {
+                          "message": "Successfully update Api",
+                            "data": {
+                              "id": 1,
+                              "name": "name api",
+                              "api_id": "auto generated id",
+                              "api_type": "Custom API",
+                              "identifier": "url identifier",
+                              "token_exp": integer,
+                              "token_exp_browser": integer,
+                              "sign_algorithm": "algorithm signing",
+                              "rbac": boolean,
+                              "permission_acc_token": boolean,
+                              "allow_skip_user": boolean,
+                              "allow_off_acc": boolean,
+                              "tenant_id": 1
+                            }
+                        }
+
+                        Status Code 400 - Bad Request
+                        
+                        {
+                          "message": "Parse error",
+                          "data": ""
+                        }
+
+                        Status Code 403 - Forbidden
+                        
+                        {
+                          "message": "You dont have access to this data",
+                          "data": ""
+                        }
+
+                        Status Code 404 - Not Found
+                        
+                        {
+                          "message": "Api not found",
+                          "data": ""
+                        }
+
+                        Status Code 500 - Internal Server Error
+                        
+                        {
+                          "message": "Internal Server Error",
+                          "data": ""
+                        }
+                        "#}
+                        </code>
+                    </pre>        
+                  </div>
+
+                </div>
+              </div>
+
+              // Delete a Client Section
+              <div class="grid grid-cols-2">
+                // description
+                <div class="relative items-center w-full mx-auto">
+                  <div class="grid grid-cols-1 ">
+                    <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
+                      <div class="p-4">
+                        <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Delete a resource server"}</h4>
+                        <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-red-400 rounded-full">{"DELETE"}</span>
+                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/resource-servers/{id}"}</span>
+                        <p class="mt-3 text-base leading-relaxed text-gray-500">
+                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"Delete an existing API (also known as a resource server)."}</span>
+                        </p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                
+                // response section
+                <div class="relative items-center w-full mx-auto bg-gray-500">
+                  // Request body section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-lg">
+                        {r#"
+
+
+
+                        No Request Body Required
+                        
+                        
+
+                        "#}
+                        </code>
+                    </pre>      
+                  </div>
+                  
+                  // Request Headers Section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-xs">
+                        {r#"
+
+
+                        "access_token": "value from field 'token' on method POST /login"
+
+                        
+                        "#}
+                        </code>
+                    </pre>        
+                  </div>
+                  
+                  // request parameter section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Parameters Example"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-xs">
+                        {r#"
+
+                        endpoint: /api/v2/resource-servers/{id}
+                        example: /api/v2/resource-servers/AaiyAPdpYdesoKnqjj8HJqRn4T5titww
+
+
+                        "id": "id of api"
+
+                        
+                        "#}
+                        </code>
+                    </pre>        
+                  </div>
+                  
+                  // Response section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-xs">
+                        {r#"
+
+                        Status Code 200 - Ok
+
+                        {
+                          "message": "Api deleted",
+                          "data": ""
+                        }
+
+                                  
+                        Status Code 403 - Forbidden
+                        
+                        {
+                          "message": "You dont have access to this data",
+                          "data": ""
+                        }
+
+                        Status Code 403 - Forbidden
+                        
+                        {
+                          "message": "You dont have access to this data",
+                          "data": ""
+                        }
+
+                        Status Code 404 - Not Found
+                        
+                        {
+                          "message": "Api not found",
+                          "data": ""
+                        }
+
+                        Status Code 500 - Internal Server Error
+                        
+                        {
+                          "message": "Internal Server Error",
+                          "data": ""
+                        }
+                        "#}
+                        </code>
+                    </pre>        
+                  </div>
+
+                </div>
+              </div>
 
             // Layout
             </div>

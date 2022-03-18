@@ -1081,6 +1081,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(234 179 8 / var(--tw-text-opacity));
 }
 
+.text-violet-500 {
+  --tw-text-opacity: 1;
+  color: rgb(139 92 246 / var(--tw-text-opacity));
+}
+
 .no-underline {
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
