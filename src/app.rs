@@ -294,7 +294,91 @@ pub fn app() -> Html {
         //         </main>
         //     </div>
         // </div>
-        <div class="grid grid-cols-5">
+
+
+        // Navbar
+        <div class="container w-full">
+            <div x-data="{ open: false }" class="
+          flex flex-col
+          max-w-screen-xl
+          p-5
+          mx-auto
+          md:items-center md:justify-between md:flex-row md:px-6
+          lg:px-8
+        ">
+              <div class="flex flex-row items-center justify-between lg:justify-start">
+                <a href="#" class="
+              text-lg
+              font-bold
+              tracking-tighter
+              text-blue-400
+              transition
+              duration-500
+              ease-in-out
+              transform
+              tracking-relaxed
+              lg:pr-8
+            "> {"Domain Doc"} </a>
+                <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline">
+                  <svg fill="currentColor" viewBox="0 0 20 20" class="w-8 h-8">
+                    <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                    <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" style="display: none"></path>
+                  </svg>
+                </button>
+              </div>
+              <nav class="flex-col flex-grow hidden md:flex md:justify-end md:flex-row">
+                <ul class="space-y-2 list-none lg:space-y-0 lg:items-center lg:inline-flex">
+                  <li>
+                    <a href="#" class="
+                  px-2
+                  lg:px-6
+                  py-6
+                  text-sm
+                  border-b-2 border-transparent
+                  hover:border-blue-600
+                  leading-[22px]
+                  md:px-3
+                  text-gray-500
+                  hover:text-blue-500
+                "> {"Auth Doc"}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="
+                  px-2
+                  lg:px-6
+                  py-6
+                  text-sm
+                  border-b-2 border-transparent
+                  hover:border-blue-600
+                  leading-[22px]
+                  md:px-3
+                  text-gray-500
+                  hover:text-blue-500
+                "> {"Management API Doc"} </a>
+                  </li>
+                  <li>
+                    <a href="#" class="
+                  px-2
+                  lg:px-6
+                  py-6
+                  text-sm
+                  border-b-2 border-transparent
+                  hover:border-blue-600
+                  leading-[22px]
+                  md:px-3
+                  text-gray-500
+                  hover:text-blue-500
+                "> {"User Guide"} 
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+
+        <div class="grid grid-cols-5 border-t-4 border-gray-300">
         <div class="w-full px-6 text-xl text-gray-800 leading-normal bg-gray-300">
         <div class="block lg:hidden sticky inset-0">
             <button id="menu-toggle" class="flex w-full justify-end px-3 py-3 bg-white lg:bg-transparent border rounded border-gray-600 hover:border-yellow-600 appearance-none focus:outline-none">
@@ -891,6 +975,295 @@ pub fn app() -> Html {
 
                         {
                           "message": "Successfullly create Application",
+                          "data": {
+                              "id": "AaiyAPdpYdesoKnqjj8HJqRn4T5titww",
+                              "name": "name of application",
+                              "client_id": "auto generated client id",
+                              "app_type": "custom app",
+                              "domain": "concat from tenant_name and tenant region",
+                              "client_secret": "auto generated client secret",
+                              "description": "description of application",
+                              "logo_url": "url logo of application",
+                              "token_auth_method": "default 'Post'",
+                              "app_login_url": "url app login",
+                              "callback_url": "url callback",
+                              "logout_url": "url logout",
+                              "web_origin": "url web origin",
+                              "cors": "url cors",
+                              "id_token_exp": "default integer",
+                              "reuse_interval": "default integer",
+                              "abs_lifetime": "default integer",
+                              "inactivity_lifetime": "default integer",
+                              "tenant_id": id tenant
+                            }
+                        }
+                                  
+                        Status Code 403 - Forbidden
+                        
+                        {
+                          "message": "You dont have access to this data",
+                          "data": ""
+                        }
+
+                        Status Code 404 - Not Found
+                        
+                        {
+                          "message": "Application not found",
+                          "data": ""
+                        }
+
+                        Status Code 500 - Internal Server Error
+                        
+                        {
+                          "message": "Internal Server Error",
+                          "data": ""
+                        }
+                        "#}
+                        </code>
+                    </pre>        
+                  </div>
+
+                </div>
+              </div>
+
+              // Patch Update a Client Section
+              <div class="grid grid-cols-2">
+                // description
+                <div class="relative items-center w-full mx-auto">
+                  <div class="grid grid-cols-1 ">
+                    <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
+                      <div class="p-4">
+                        <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Update a client"}</h4>
+                        <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-yellow-400 rounded-full">{"PATCH"}</span>
+                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/clients/{id}"}</span>
+                        <p class="mt-3 text-base leading-relaxed text-gray-500">
+                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"Update details of a client."}</span>
+                        </p>
+                        <p class="mt-3 text-base leading-relaxed text-gray-500">
+                        {"Note: The `client_secret` and `signing_key` attributes can only be updated with the `update:client_keys` scope."}
+                        </p> 
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                
+                // response section
+                <div class="relative items-center w-full mx-auto bg-gray-500">
+                  // Request body section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-lg">
+                        {r#"
+
+
+
+                        No Request Body Required
+                        
+                        
+
+                        "#}
+                        </code>
+                    </pre>      
+                  </div>
+                  
+                  // Request Headers Section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-xs">
+                        {r#"
+
+
+                        "access_token": "value from field 'token' on method POST /login"
+
+                        
+                        "#}
+                        </code>
+                    </pre>        
+                  </div>
+                  
+                  // request parameter section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Parameters Example"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-xs">
+                        {r#"
+
+                        endpoint: /api/v2/clients/{id}
+                        example: /api/v2/clients/AaiyAPdpYdesoKnqjj8HJqRn4T5titww
+
+
+                        "id": "id of app"
+
+                        
+                        "#}
+                        </code>
+                    </pre>        
+                  </div>
+                  
+                  // Response section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-xs">
+                        {r#"
+
+                        Status Code 200 - Ok
+
+                        {
+                          "message": "Successfully update a Application Client",
+                          "data": {
+                              "id": "AaiyAPdpYdesoKnqjj8HJqRn4T5titww",
+                              "name": "name of application",
+                              "client_id": "auto generated client id",
+                              "app_type": "custom app",
+                              "domain": "concat from tenant_name and tenant region",
+                              "client_secret": "auto generated client secret",
+                              "description": "description of application",
+                              "logo_url": "url logo of application",
+                              "token_auth_method": "default 'Post'",
+                              "app_login_url": "url app login",
+                              "callback_url": "url callback",
+                              "logout_url": "url logout",
+                              "web_origin": "url web origin",
+                              "cors": "url cors",
+                              "id_token_exp": "default integer",
+                              "reuse_interval": "default integer",
+                              "abs_lifetime": "default integer",
+                              "inactivity_lifetime": "default integer",
+                              "tenant_id": id tenant
+                            }
+                        }
+                                  
+                        Status Code 403 - Forbidden
+                        
+                        {
+                          "message": "You dont have access to this data",
+                          "data": ""
+                        }
+
+                        Status Code 404 - Not Found
+                        
+                        {
+                          "message": "Application not found",
+                          "data": ""
+                        }
+
+                        Status Code 500 - Internal Server Error
+                        
+                        {
+                          "message": "Internal Server Error",
+                          "data": ""
+                        }
+                        "#}
+                        </code>
+                    </pre>        
+                  </div>
+
+                </div>
+              </div>
+
+              // Delete a Client Section
+              <div class="grid grid-cols-2">
+                // description
+                <div class="relative items-center w-full mx-auto">
+                  <div class="grid grid-cols-1 ">
+                    <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
+                      <div class="p-4">
+                        <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Delete a client"}</h4>
+                        <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-red-400 rounded-full">{"DELETE"}</span>
+                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/clients/{id}"}</span>
+                        <p class="mt-3 text-base leading-relaxed text-gray-500">
+                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"Delete a client and related configuration (rules, connections, etc)."}</span>
+                        </p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                
+                // response section
+                <div class="relative items-center w-full mx-auto bg-gray-500">
+                  // Request body section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-lg">
+                        {r#"
+
+
+
+                        No Request Body Required
+                        
+                        
+
+                        "#}
+                        </code>
+                    </pre>      
+                  </div>
+                  
+                  // Request Headers Section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-xs">
+                        {r#"
+
+
+                        "access_token": "value from field 'token' on method POST /login"
+
+                        
+                        "#}
+                        </code>
+                    </pre>        
+                  </div>
+                  
+                  // request parameter section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Parameters Example"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-xs">
+                        {r#"
+
+                        endpoint: /api/v2/clients/{id}
+                        example: /api/v2/clients/AaiyAPdpYdesoKnqjj8HJqRn4T5titww
+
+
+                        "id": "id of app"
+
+                        
+                        "#}
+                        </code>
+                    </pre>        
+                  </div>
+                  
+                  // Response section
+                  <div>
+                    <div class="p-4">
+                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
+                    </div>
+                    <pre>
+                      <code class="json text-xs">
+                        {r#"
+
+                        Status Code 200 - Ok
+
+                        {
+                          "message": "Successfully delete the Application",
                           "data": {
                               "id": "AaiyAPdpYdesoKnqjj8HJqRn4T5titww",
                               "name": "name of application",
