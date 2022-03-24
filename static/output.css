@@ -114,6 +114,10 @@ strong {
   font-weight: bolder;
 }
 
+.hljs{
+  background: #4e575e
+}
+
 /*
 1. Use the user's configured `mono` font family by default.
 2. Correct the odd `em` font sizing in all browsers.

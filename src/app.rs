@@ -475,14 +475,14 @@ pub fn app() -> Html {
                         <pre>
                           <code class="json text-xs">
                             {r#"
-                            {
-                              "email": "blabla@email.com",
-                              "password": "password minimal 8, huruf kecil, huruf besar, nomer",
-                              "name": "username",
-                              "account_type": "personal / businness",
-                              "region": "us / au / jp / eu",
-                              "tenant_name": "first line of domain for users",
-                            }                       
+        {
+          "email": "blabla@email.com",
+          "password": "password minimal 8, huruf kecil, huruf besar, nomer",
+          "name": "username",
+          "account_type": "personal / businness",
+          "region": "us / au / jp / eu",
+          "tenant_name": "first line of domain for users",
+        }                       
                             "#}
                             </code>
                         </pre>        
@@ -499,7 +499,7 @@ pub fn app() -> Html {
 
 
 
-                            No Headers Required
+        No Headers Required
                             
                             
 
@@ -517,33 +517,33 @@ pub fn app() -> Html {
                           <code class="json text-xs">
                             {r#"
 
-                            Status Code 201 - Created
+        Status Code 201 - Created
 
-                            {
-                              "message": "You are sucessfully registered.",
-                              "data": "registered email"
-                            }
+        {
+          "message": "You are sucessfully registered.",
+          "data": "registered email"
+        }
 
-                            Status Code 400 - Bad Request(validate field email dan password)
-                            
-                            {
-                              "message": "validation error",
-                              "data": ""
-                            }
+        Status Code 400 - Bad Request(validate field email dan password)
 
-                            Status Code 400 - Bad Request(validate unique email)
-                            
-                            {
-                                "message": "Email is already used.",
-                                "data": ""
-                            }
+        {
+          "message": "validation error",
+          "data": ""
+        }
 
-                            Status Code 500 - Internal Server Error
-                            
-                            {
-                              "message": "Internal Server Error",
-                              "data": ""
-                            }
+        Status Code 400 - Bad Request(validate unique email)
+
+        {
+            "message": "Email is already used.",
+            "data": ""
+        }
+
+        Status Code 500 - Internal Server Error
+
+        {
+          "message": "Internal Server Error",
+          "data": ""
+        }
 
                             "#}
                             </code>
@@ -581,10 +581,10 @@ pub fn app() -> Html {
                         <pre>
                           <code class="json text-xs">
                             {r#"
-                            {
-                              "email": "blabla@email.com",
-                              "password": "password minimal 8, huruf kecil, huruf besar, nomer"
-                            }             
+        {
+          "email": "blabla@email.com",
+          "password": "password minimal 8, huruf kecil, huruf besar, nomer"
+        }             
                             "#}
                             </code>
                         </pre>        
@@ -601,7 +601,7 @@ pub fn app() -> Html {
 
 
 
-                            No Headers Required
+        No Headers Required
                             
                             
 
@@ -619,27 +619,27 @@ pub fn app() -> Html {
                           <code class="json text-xs">
                             {r#"
 
-                            Status Code 200 - Ok
+        Status Code 200 - Ok
 
-                            {
-                              "email": "blabla@email.com",
-                              "username": "username",
-                              "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI2MjBlMGZmMzk5YzgwMDhkZjY4Yzc0OTIiLCJleHAiOjE2NDUxNzUxNTUsImlhdCI6MTY0NTA4ODc1NSwiZW1haWwiOiJoZXlrYWxsQGdtYWlsLmNvbSIsInRlbmFudCI6IkRvbWFpbiIsInNjb3BlcyI6InJlYWQ6Y2xpZW50X2dyYW50cyBjcmVhdGU6Y2xpZW50X2dyYW50cyBkZWxldGU6Y2xpZW50X2dyYW50cyB1cGRhdGU6Y2xpZW50X2dyYW50cyByZWFkOnVzZXJzIHVwZGF0ZTp1c2VycyBkZWxldGU6dXNlcnMgY3JlYXRlOnVzZXJzIHJlYWQ6dXNlcnNfYXBwX21ldGFkYXRhIHVwZGF0ZTp1c2Vyc19hcHBfbWV0YWRhdGEgZGVsZXRlOnVzZXJzX2FwcF9tZXRhZGF0YSBjcmVhdGU6dXNlcnNfYXBwX21ldGFkYXRhIHJlYWQ6dXNlcl9jdXN0b21fYmxvY2tzIGNyZWF0ZTp1c2VyX2N1c3RvbV9ibG9ja3MgZGVsZXRlOnVzZXJfY3VzdG9tX2Jsb2NrcyBjcmVhdGU6dXNlcl90aWNrZXRzIHJlYWQ6Y2xpZW50cyB1cGRhdGU6Y2xpZW50cyBkZWxldGU6Y2xpZW50cyBjcmVhdGU6Y2xpZW50cyByZWFkOmNsaWVudF9rZXlzIHVwZGF0ZTpjbGllbnRfa2V5cyBkZWxldGU6Y2xpZW50X2tleXMgY3JlYXRlOmNsaWVudF9rZXlzIHJlYWQ6Y29ubmVjdGlvbnMgdXBkYXRlOmNvbm5lY3Rpb25zIGRlbGV0ZTpjb25uZWN0aW9ucyBjcmVhdGU6Y29ubmVjdGlvbnMgcmVhZDpyZXNvdXJjZV9zZXJ2ZXJzIHVwZGF0ZTpyZXNvdXJjZV9zZXJ2ZXJzIGRlbGV0ZTpyZXNvdXJjZV9zZXJ2ZXJzIGNyZWF0ZTpyZXNvdXJjZV9zZXJ2ZXJzIHJlYWQ6ZGV2aWNlX2NyZWRlbnRpYWxzIHVwZGF0ZTpkZXZpY2VfY3JlZGVudGlhbHMgZGVsZXRlOmRldmljZV9jcmVkZW50aWFscyBjcmVhdGU6ZGV2aWNlX2NyZWRlbnRpYWxzIHJlYWQ6cnVsZXMgdXBkYXRlOnJ1bGVzIGRlbGV0ZTpydWxlcyBjcmVhdGU6cnVsZXMgcmVhZDpydWxlc19jb25maWdzIHVwZGF0ZTpydWxlc19jb25maWdzIGRlbGV0ZTpydWxlc19jb25maWdzIHJlYWQ6aG9va3MgdXBkYXRlOmhvb2tzIGRlbGV0ZTpob29rcyBjcmVhdGU6aG9va3MgcmVhZDphY3Rpb25zIHVwZGF0ZTphY3Rpb25zIGRlbGV0ZTphY3Rpb25zIGNyZWF0ZTphY3Rpb25zIHJlYWQ6ZW1haWxfcHJvdmlkZXIgdXBkYXRlOmVtYWlsX3Byb3ZpZGVyIGRlbGV0ZTplbWFpbF9wcm92aWRlciBjcmVhdGU6ZW1haWxfcHJvdmlkZXIgYmxhY2tsaXN0OnRva2VucyByZWFkOnN0YXRzIHJlYWQ6aW5zaWdodHMgcmVhZDp0ZW5hbnRfc2V0dGluZ3MgdXBkYXRlOnRlbmFudF9zZXR0aW5ncyByZWFkOmxvZ3MgcmVhZDpsb2dzX3VzZXJzIHJlYWQ6c2hpZWxkcyBjcmVhdGU6c2hpZWxkcyB1cGRhdGU6c2hpZWxkcyBkZWxldGU6c2hpZWxkcyByZWFkOmFub21hbHlfYmxvY2tzIGRlbGV0ZTphbm9tYWx5X2Jsb2NrcyB1cGRhdGU6dHJpZ2dlcnMgcmVhZDp0cmlnZ2VycyByZWFkOmdyYW50cyBkZWxldGU6Z3JhbnRzIHJlYWQ6Z3VhcmRpYW5fZmFjdG9ycyB1cGRhdGU6Z3VhcmRpYW5fZmFjdG9ycyByZWFkOmd1YXJkaWFuX2Vucm9sbG1lbnRzIGRlbGV0ZTpndWFyZGlhbl9lbnJvbGxtZW50cyBjcmVhdGU6Z3VhcmRpYW5fZW5yb2xsbWVudF90aWNrZXRzIHJlYWQ6dXNlcl9pZHBfdG9rZW5zIGNyZWF0ZTpwYXNzd29yZHNfY2hlY2tpbmdfam9iIGRlbGV0ZTpwYXNzd29yZHNfY2hlY2tpbmdfam9iIHJlYWQ6Y3VzdG9tX2RvbWFpbnMgZGVsZXRlOmN1c3RvbV9kb21haW5zIGNyZWF0ZTpjdXN0b21fZG9tYWlucyB1cGRhdGU6Y3VzdG9tX2RvbWFpbnMgcmVhZDplbWFpbF90ZW1wbGF0ZXMgY3JlYXRlOmVtYWlsX3RlbXBsYXRlcyB1cGRhdGU6ZW1haWxfdGVtcGxhdGVzIHJlYWQ6bWZhX3BvbGljaWVzIHVwZGF0ZTptZmFfcG9saWNpZXMgcmVhZDpyb2xlcyBjcmVhdGU6cm9sZXMgZGVsZXRlOnJvbGVzIHVwZGF0ZTpyb2xlcyByZWFkOnByb21wdHMgdXBkYXRlOnByb21wdHMgcmVhZDpicmFuZGluZyB1cGRhdGU6YnJhbmRpbmcgZGVsZXRlOmJyYW5kaW5nIHJlYWQ6bG9nX3N0cmVhbXMgY3JlYXRlOmxvZ19zdHJlYW1zIGRlbGV0ZTpsb2dfc3RyZWFtcyB1cGRhdGU6bG9nX3N0cmVhbXMgY3JlYXRlOnNpZ25pbmdfa2V5cyByZWFkOnNpZ25pbmdfa2V5cyB1cGRhdGU6c2lnbmluZ19rZXlzIHJlYWQ6bGltaXRzIHVwZGF0ZTpsaW1pdHMgY3JlYXRlOnJvbGVfbWVtYmVycyByZWFkOnJvbGVfbWVtYmVycyBkZWxldGU6cm9sZV9tZW1iZXJzIHJlYWQ6ZW50aXRsZW1lbnRzIHJlYWQ6YXR0YWNrX3Byb3RlY3Rpb24gdXBkYXRlOmF0dGFja19wcm90ZWN0aW9uIHJlYWQ6b3JnYW5pemF0aW9ucyB1cGRhdGU6b3JnYW5pemF0aW9ucyBjcmVhdGU6b3JnYW5pemF0aW9ucyBkZWxldGU6b3JnYW5pemF0aW9ucyBjcmVhdGU6b3JnYW5pemF0aW9uX21lbWJlcnMgcmVhZDpvcmdhbml6YXRpb25fbWVtYmVycyBkZWxldGU6b3JnYW5pemF0aW9uX21lbWJlcnMgY3JlYXRlOm9yZ2FuaXphdGlvbl9jb25uZWN0aW9ucyByZWFkOm9yZ2FuaXphdGlvbl9jb25uZWN0aW9ucyB1cGRhdGU6b3JnYW5pemF0aW9uX2Nvbm5lY3Rpb25zIGRlbGV0ZTpvcmdhbml6YXRpb25fY29ubmVjdGlvbnMgY3JlYXRlOm9yZ2FuaXphdGlvbl9tZW1iZXJfcm9sZXMgcmVhZDpvcmdhbml6YXRpb25fbWVtYmVyX3JvbGVzIGRlbGV0ZTpvcmdhbml6YXRpb25fbWVtYmVyX3JvbGVzIGNyZWF0ZTpvcmdhbml6YXRpb25faW52aXRhdGlvbnMgcmVhZDpvcmdhbml6YXRpb25faW52aXRhdGlvbnMgZGVsZXRlOm9yZ2FuaXphdGlvbl9pbnZpdGF0aW9ucyJ9.P0IhQqmzWe5uQ1eQxQTIX2xESNaGvcCeN1qwJs3247g"
-                            }
+        {
+          "email": "blabla@email.com",
+          "username": "username",
+          "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI2MjBlMGZmMzk5YzgwMDhkZjY4Yzc0OTIiLCJleHAiOjE2NDUxNzUxNTUsImlhdCI6MTY0NTA4ODc1NSwiZW1haWwiOiJoZXlrYWxsQGdtYWlsLmNvbSIsInRlbmFudCI6IkRvbWFpbiIsInNjb3BlcyI6InJlYWQ6Y2xpZW50X2dyYW50cyBjcmVhdGU6Y2xpZW50X2dyYW50cyBkZWxldGU6Y2xpZW50X2dyYW50cyB1cGRhdGU6Y2xpZW50X2dyYW50cyByZWFkOnVzZXJzIHVwZGF0ZTp1c2VycyBkZWxldGU6dXNlcnMgY3JlYXRlOnVzZXJzIHJlYWQ6dXNlcnNfYXBwX21ldGFkYXRhIHVwZGF0ZTp1c2Vyc19hcHBfbWV0YWRhdGEgZGVsZXRlOnVzZXJzX2FwcF9tZXRhZGF0YSBjcmVhdGU6dXNlcnNfYXBwX21ldGFkYXRhIHJlYWQ6dXNlcl9jdXN0b21fYmxvY2tzIGNyZWF0ZTp1c2VyX2N1c3RvbV9ibG9ja3MgZGVsZXRlOnVzZXJfY3VzdG9tX2Jsb2NrcyBjcmVhdGU6dXNlcl90aWNrZXRzIHJlYWQ6Y2xpZW50cyB1cGRhdGU6Y2xpZW50cyBkZWxldGU6Y2xpZW50cyBjcmVhdGU6Y2xpZW50cyByZWFkOmNsaWVudF9rZXlzIHVwZGF0ZTpjbGllbnRfa2V5cyBkZWxldGU6Y2xpZW50X2tleXMgY3JlYXRlOmNsaWVudF9rZXlzIHJlYWQ6Y29ubmVjdGlvbnMgdXBkYXRlOmNvbm5lY3Rpb25zIGRlbGV0ZTpjb25uZWN0aW9ucyBjcmVhdGU6Y29ubmVjdGlvbnMgcmVhZDpyZXNvdXJjZV9zZXJ2ZXJzIHVwZGF0ZTpyZXNvdXJjZV9zZXJ2ZXJzIGRlbGV0ZTpyZXNvdXJjZV9zZXJ2ZXJzIGNyZWF0ZTpyZXNvdXJjZV9zZXJ2ZXJzIHJlYWQ6ZGV2aWNlX2NyZWRlbnRpYWxzIHVwZGF0ZTpkZXZpY2VfY3JlZGVudGlhbHMgZGVsZXRlOmRldmljZV9jcmVkZW50aWFscyBjcmVhdGU6ZGV2aWNlX2NyZWRlbnRpYWxzIHJlYWQ6cnVsZXMgdXBkYXRlOnJ1bGVzIGRlbGV0ZTpydWxlcyBjcmVhdGU6cnVsZXMgcmVhZDpydWxlc19jb25maWdzIHVwZGF0ZTpydWxlc19jb25maWdzIGRlbGV0ZTpydWxlc19jb25maWdzIHJlYWQ6aG9va3MgdXBkYXRlOmhvb2tzIGRlbGV0ZTpob29rcyBjcmVhdGU6aG9va3MgcmVhZDphY3Rpb25zIHVwZGF0ZTphY3Rpb25zIGRlbGV0ZTphY3Rpb25zIGNyZWF0ZTphY3Rpb25zIHJlYWQ6ZW1haWxfcHJvdmlkZXIgdXBkYXRlOmVtYWlsX3Byb3ZpZGVyIGRlbGV0ZTplbWFpbF9wcm92aWRlciBjcmVhdGU6ZW1haWxfcHJvdmlkZXIgYmxhY2tsaXN0OnRva2VucyByZWFkOnN0YXRzIHJlYWQ6aW5zaWdodHMgcmVhZDp0ZW5hbnRfc2V0dGluZ3MgdXBkYXRlOnRlbmFudF9zZXR0aW5ncyByZWFkOmxvZ3MgcmVhZDpsb2dzX3VzZXJzIHJlYWQ6c2hpZWxkcyBjcmVhdGU6c2hpZWxkcyB1cGRhdGU6c2hpZWxkcyBkZWxldGU6c2hpZWxkcyByZWFkOmFub21hbHlfYmxvY2tzIGRlbGV0ZTphbm9tYWx5X2Jsb2NrcyB1cGRhdGU6dHJpZ2dlcnMgcmVhZDp0cmlnZ2VycyByZWFkOmdyYW50cyBkZWxldGU6Z3JhbnRzIHJlYWQ6Z3VhcmRpYW5fZmFjdG9ycyB1cGRhdGU6Z3VhcmRpYW5fZmFjdG9ycyByZWFkOmd1YXJkaWFuX2Vucm9sbG1lbnRzIGRlbGV0ZTpndWFyZGlhbl9lbnJvbGxtZW50cyBjcmVhdGU6Z3VhcmRpYW5fZW5yb2xsbWVudF90aWNrZXRzIHJlYWQ6dXNlcl9pZHBfdG9rZW5zIGNyZWF0ZTpwYXNzd29yZHNfY2hlY2tpbmdfam9iIGRlbGV0ZTpwYXNzd29yZHNfY2hlY2tpbmdfam9iIHJlYWQ6Y3VzdG9tX2RvbWFpbnMgZGVsZXRlOmN1c3RvbV9kb21haW5zIGNyZWF0ZTpjdXN0b21fZG9tYWlucyB1cGRhdGU6Y3VzdG9tX2RvbWFpbnMgcmVhZDplbWFpbF90ZW1wbGF0ZXMgY3JlYXRlOmVtYWlsX3RlbXBsYXRlcyB1cGRhdGU6ZW1haWxfdGVtcGxhdGVzIHJlYWQ6bWZhX3BvbGljaWVzIHVwZGF0ZTptZmFfcG9saWNpZXMgcmVhZDpyb2xlcyBjcmVhdGU6cm9sZXMgZGVsZXRlOnJvbGVzIHVwZGF0ZTpyb2xlcyByZWFkOnByb21wdHMgdXBkYXRlOnByb21wdHMgcmVhZDpicmFuZGluZyB1cGRhdGU6YnJhbmRpbmcgZGVsZXRlOmJyYW5kaW5nIHJlYWQ6bG9nX3N0cmVhbXMgY3JlYXRlOmxvZ19zdHJlYW1zIGRlbGV0ZTpsb2dfc3RyZWFtcyB1cGRhdGU6bG9nX3N0cmVhbXMgY3JlYXRlOnNpZ25pbmdfa2V5cyByZWFkOnNpZ25pbmdfa2V5cyB1cGRhdGU6c2lnbmluZ19rZXlzIHJlYWQ6bGltaXRzIHVwZGF0ZTpsaW1pdHMgY3JlYXRlOnJvbGVfbWVtYmVycyByZWFkOnJvbGVfbWVtYmVycyBkZWxldGU6cm9sZV9tZW1iZXJzIHJlYWQ6ZW50aXRsZW1lbnRzIHJlYWQ6YXR0YWNrX3Byb3RlY3Rpb24gdXBkYXRlOmF0dGFja19wcm90ZWN0aW9uIHJlYWQ6b3JnYW5pemF0aW9ucyB1cGRhdGU6b3JnYW5pemF0aW9ucyBjcmVhdGU6b3JnYW5pemF0aW9ucyBkZWxldGU6b3JnYW5pemF0aW9ucyBjcmVhdGU6b3JnYW5pemF0aW9uX21lbWJlcnMgcmVhZDpvcmdhbml6YXRpb25fbWVtYmVycyBkZWxldGU6b3JnYW5pemF0aW9uX21lbWJlcnMgY3JlYXRlOm9yZ2FuaXphdGlvbl9jb25uZWN0aW9ucyByZWFkOm9yZ2FuaXphdGlvbl9jb25uZWN0aW9ucyB1cGRhdGU6b3JnYW5pemF0aW9uX2Nvbm5lY3Rpb25zIGRlbGV0ZTpvcmdhbml6YXRpb25fY29ubmVjdGlvbnMgY3JlYXRlOm9yZ2FuaXphdGlvbl9tZW1iZXJfcm9sZXMgcmVhZDpvcmdhbml6YXRpb25fbWVtYmVyX3JvbGVzIGRlbGV0ZTpvcmdhbml6YXRpb25fbWVtYmVyX3JvbGVzIGNyZWF0ZTpvcmdhbml6YXRpb25faW52aXRhdGlvbnMgcmVhZDpvcmdhbml6YXRpb25faW52aXRhdGlvbnMgZGVsZXRlOm9yZ2FuaXphdGlvbl9pbnZpdGF0aW9ucyJ9.P0IhQqmzWe5uQ1eQxQTIX2xESNaGvcCeN1qwJs3247g"
+        }
 
-                            Status Code 401 - Unauthorized
-                            
-                            {
-                              "message": "Wrong username or password, please try again",
-                              "data": ""
-                            }
-                            
-                            Status Code 500 - Internal Server Error
-                            
-                            {
-                              "message": "Internal Server Error",
-                              "data": ""
-                            }
+        Status Code 401 - Unauthorized
+
+        {
+          "message": "Wrong username or password, please try again",
+          "data": ""
+        }
+
+        Status Code 500 - Internal Server Error
+
+        {
+          "message": "Internal Server Error",
+          "data": ""
+        }
 
                             "#}
                             </code>
@@ -686,9 +686,9 @@ pub fn app() -> Html {
 
 
 
-                        No Request Body Required
-                        
-                        
+        No Request Body Required
+
+
 
                         "#}
                         </code>
@@ -705,9 +705,9 @@ pub fn app() -> Html {
                         {r#"
 
 
-                        "access_token": "value from field 'token' on method POST /login"
+        "access_token": "value from field 'token' on method POST /login"
 
-                        
+
                         "#}
                         </code>
                     </pre>        
@@ -722,34 +722,34 @@ pub fn app() -> Html {
                       <code class="json text-xs">
                         {r#"
 
-                        Status Code 200 - Ok
+        Status Code 200 - Ok
 
-                        {
-                          "message": "Succesfully get all Applications",
-                          "data": [
-                              {
-                                  "id": "AaiyAPdpYdesoKnqjj8HJqRn4T5titww",
-                                  "name": "name app",
-                                  "client_id": "client id app",
-                                  "app_type": "app type",
-                                  "logo_url": "url logo"
-                              },
-                              {
-                                  "id": "kmzWay87dsdDSdsadffsSFGWWWfsaggS",
-                                  "name": "name app",
-                                  "client_id": "client id app",
-                                  "app_type": "app type",
-                                  "logo_url": "url logo"
-                              },
-                          ]
-                        }
-                                  
-                        Status Code 500 - Internal Server Error
-                        
-                        {
-                          "message": "Internal Server Error",
-                          "data": ""
-                        }
+        {
+          "message": "Succesfully get all Applications",
+          "data": [
+              {
+                  "id": "AaiyAPdpYdesoKnqjj8HJqRn4T5titww",
+                  "name": "name app",
+                  "client_id": "client id app",
+                  "app_type": "app type",
+                  "logo_url": "url logo"
+              },
+              {
+                  "id": "kmzWay87dsdDSdsadffsSFGWWWfsaggS",
+                  "name": "name app",
+                  "client_id": "client id app",
+                  "app_type": "app type",
+                  "logo_url": "url logo"
+              },
+          ]
+        }
+                  
+        Status Code 500 - Internal Server Error
+
+        {
+          "message": "Internal Server Error",
+          "data": ""
+        }
 
                         "#}
                         </code>
@@ -794,10 +794,10 @@ pub fn app() -> Html {
                     <pre>
                       <code class="json text-xs">
                         {r#"
-                        {
-                            "name": "name app",
-                            "app_type": "type of app: default is 'custom app'"
-                        }
+        {
+            "name": "name app",
+            "app_type": "type of app: default is 'custom app'"
+        }
                         "#}
                         </code>
                     </pre>          
@@ -813,7 +813,7 @@ pub fn app() -> Html {
                         {r#"
 
 
-                        "access_token": "value from field 'token' on method POST /login"
+        "access_token": "value from field 'token' on method POST /login"
 
                         
                         "#}
@@ -830,46 +830,46 @@ pub fn app() -> Html {
                       <code class="json text-xs">
                         {r#"
 
-                        Status Code 201 - Created
+        Status Code 201 - Created
 
-                        {
-                          "message": "Successfullly create Application",
-                          "data": {
-                              "id": 1,
-                              "name": "name of application",
-                              "client_id": "auto generated client id",
-                              "app_type": "custom app",
-                              "domain": "concat from tenant_name and tenant region",
-                              "client_secret": "auto generated client secret",
-                              "description": "description of application",
-                              "logo_url": "url logo of application",
-                              "token_auth_method": "default 'Post'",
-                              "app_login_url": "url app login",
-                              "callback_url": "url callback",
-                              "logout_url": "url logout",
-                              "web_origin": "url web origin",
-                              "cors": "url cors",
-                              "id_token_exp": "default integer",
-                              "reuse_interval": "default integer",
-                              "abs_lifetime": "default integer",
-                              "inactivity_lifetime": "default integer",
-                              "tenant_id": id tenant
-                            }
-                        }
-                                  
-                        Status Code 400 - Bad Request
-                        
-                        {
-                          "message": "Parse error",
-                          "data": ""
-                        }
+        {
+        "message": "Successfullly create Application",
+        "data": {
+            "id": 1,
+            "name": "name of application",
+            "client_id": "auto generated client id",
+            "app_type": "custom app",
+            "domain": "concat from tenant_name and tenant region",
+            "client_secret": "auto generated client secret",
+            "description": "description of application",
+            "logo_url": "url logo of application",
+            "token_auth_method": "default 'Post'",
+            "app_login_url": "url app login",
+            "callback_url": "url callback",
+            "logout_url": "url logout",
+            "web_origin": "url web origin",
+            "cors": "url cors",
+            "id_token_exp": "default integer",
+            "reuse_interval": "default integer",
+            "abs_lifetime": "default integer",
+            "inactivity_lifetime": "default integer",
+            "tenant_id": id tenant
+          }
+        }
+                                          
+        Status Code 400 - Bad Request
 
-                        Status Code 500 - Internal Server Error
-                        
-                        {
-                          "message": "Internal Server Error",
-                          "data": ""
-                        }
+        {
+          "message": "Parse error",
+          "data": ""
+        }
+
+        Status Code 500 - Internal Server Error
+
+        {
+          "message": "Internal Server Error",
+          "data": ""
+        }
 
                         "#}
                         </code>
@@ -914,7 +914,7 @@ pub fn app() -> Html {
 
 
 
-                        No Request Body Required
+        No Request Body Required
                         
                         
 
@@ -933,7 +933,7 @@ pub fn app() -> Html {
                         {r#"
 
 
-                        "access_token": "value from field 'token' on method POST /login"
+        "access_token": "value from field 'token' on method POST /login"
 
                         
                         "#}
@@ -950,13 +950,13 @@ pub fn app() -> Html {
                       <code class="json text-xs">
                         {r#"
 
-                        endpoint: /api/v2/clients/{id}
-                        example: /api/v2/clients/AaiyAPdpYdesoKnqjj8HJqRn4T5titww
+        endpoint: /api/v2/clients/{id}
+        example: /api/v2/clients/AaiyAPdpYdesoKnqjj8HJqRn4T5titww
 
 
-                        "id": "id of app"
+        "id": "id of app"
 
-                        
+
                         "#}
                         </code>
                     </pre>        
@@ -971,53 +971,53 @@ pub fn app() -> Html {
                       <code class="json text-xs">
                         {r#"
 
-                        Status Code 200 - Ok
+        Status Code 200 - Ok
 
-                        {
-                          "message": "Successfullly create Application",
-                          "data": {
-                              "id": "AaiyAPdpYdesoKnqjj8HJqRn4T5titww",
-                              "name": "name of application",
-                              "client_id": "auto generated client id",
-                              "app_type": "custom app",
-                              "domain": "concat from tenant_name and tenant region",
-                              "client_secret": "auto generated client secret",
-                              "description": "description of application",
-                              "logo_url": "url logo of application",
-                              "token_auth_method": "default 'Post'",
-                              "app_login_url": "url app login",
-                              "callback_url": "url callback",
-                              "logout_url": "url logout",
-                              "web_origin": "url web origin",
-                              "cors": "url cors",
-                              "id_token_exp": "default integer",
-                              "reuse_interval": "default integer",
-                              "abs_lifetime": "default integer",
-                              "inactivity_lifetime": "default integer",
-                              "tenant_id": id tenant
-                            }
-                        }
-                                  
-                        Status Code 403 - Forbidden
-                        
-                        {
-                          "message": "You dont have access to this data",
-                          "data": ""
-                        }
+        {
+          "message": "Successfullly create Application",
+          "data": {
+              "id": "AaiyAPdpYdesoKnqjj8HJqRn4T5titww",
+              "name": "name of application",
+              "client_id": "auto generated client id",
+              "app_type": "custom app",
+              "domain": "concat from tenant_name and tenant region",
+              "client_secret": "auto generated client secret",
+              "description": "description of application",
+              "logo_url": "url logo of application",
+              "token_auth_method": "default 'Post'",
+              "app_login_url": "url app login",
+              "callback_url": "url callback",
+              "logout_url": "url logout",
+              "web_origin": "url web origin",
+              "cors": "url cors",
+              "id_token_exp": "default integer",
+              "reuse_interval": "default integer",
+              "abs_lifetime": "default integer",
+              "inactivity_lifetime": "default integer",
+              "tenant_id": id tenant
+            }
+        }
+                  
+        Status Code 403 - Forbidden
 
-                        Status Code 404 - Not Found
-                        
-                        {
-                          "message": "Application not found",
-                          "data": ""
-                        }
+        {
+          "message": "You dont have access to this data",
+          "data": ""
+        }
 
-                        Status Code 500 - Internal Server Error
-                        
-                        {
-                          "message": "Internal Server Error",
-                          "data": ""
-                        }
+        Status Code 404 - Not Found
+
+        {
+          "message": "Application not found",
+          "data": ""
+        }
+
+        Status Code 500 - Internal Server Error
+
+        {
+          "message": "Internal Server Error",
+          "data": ""
+        }
                         "#}
                         </code>
                     </pre>        
@@ -1058,25 +1058,25 @@ pub fn app() -> Html {
                     <pre>
                       <code class="json text-xs">
                         {r#"
-                        {
-                          "name": "name app",
-                          "client_id": "client id app",
-                          "app_type": "type app",
-                          "domain": "domain app",
-                          "client_secret": "updated client secret app",
-                          "description": "description app",
-                          "logo_url": "url logo app",
-                          "token_auth_method": "token auth method app",
-                          "app_login_url": "url app login",
-                          "callback_url": "url callback app",
-                          "logout_url": "url logout app",
-                          "web_origin": "url web origin app",
-                          "cors": "url cors app",
-                          "id_token_exp": integer,
-                          "reuse_interval": integer,
-                          "abs_lifetime": integer,
-                          "inactivity_lifetime": integer,
-                        }
+        {
+          "name": "name app",
+          "client_id": "client id app",
+          "app_type": "type app",
+          "domain": "domain app",
+          "client_secret": "updated client secret app",
+          "description": "description app",
+          "logo_url": "url logo app",
+          "token_auth_method": "token auth method app",
+          "app_login_url": "url app login",
+          "callback_url": "url callback app",
+          "logout_url": "url logout app",
+          "web_origin": "url web origin app",
+          "cors": "url cors app",
+          "id_token_exp": integer,
+          "reuse_interval": integer,
+          "abs_lifetime": integer,
+          "inactivity_lifetime": integer,
+        }
                         "#}
                         </code>
                     </pre>      
@@ -1092,7 +1092,7 @@ pub fn app() -> Html {
                         {r#"
 
 
-                        "access_token": "value from field 'token' on method POST /login"
+        "access_token": "value from field 'token' on method POST /login"
 
                         
                         "#}
@@ -1109,13 +1109,13 @@ pub fn app() -> Html {
                       <code class="json text-xs">
                         {r#"
 
-                        endpoint: /api/v2/clients/{id}
-                        example: /api/v2/clients/AaiyAPdpYdesoKnqjj8HJqRn4T5titww
+        endpoint: /api/v2/clients/{id}
+        example: /api/v2/clients/AaiyAPdpYdesoKnqjj8HJqRn4T5titww
 
 
-                        "id": "id of app"
+        "id": "id of app"
 
-                        
+
                         "#}
                         </code>
                     </pre>        
@@ -1130,53 +1130,53 @@ pub fn app() -> Html {
                       <code class="json text-xs">
                         {r#"
 
-                        Status Code 200 - Ok
+        Status Code 200 - Ok
 
-                        {
-                          "message": "Successfully update a Application Client",
-                          "data": {
-                              "id": "AaiyAPdpYdesoKnqjj8HJqRn4T5titww",
-                              "name": "name of application",
-                              "client_id": "auto generated client id",
-                              "app_type": "custom app",
-                              "domain": "concat from tenant_name and tenant region",
-                              "client_secret": "auto generated client secret",
-                              "description": "description of application",
-                              "logo_url": "url logo of application",
-                              "token_auth_method": "default 'Post'",
-                              "app_login_url": "url app login",
-                              "callback_url": "url callback",
-                              "logout_url": "url logout",
-                              "web_origin": "url web origin",
-                              "cors": "url cors",
-                              "id_token_exp": "default integer",
-                              "reuse_interval": "default integer",
-                              "abs_lifetime": "default integer",
-                              "inactivity_lifetime": "default integer",
-                              "tenant_id": id tenant
-                            }
-                        }
-                                  
-                        Status Code 403 - Forbidden
-                        
-                        {
-                          "message": "You dont have access to this data",
-                          "data": ""
-                        }
+        {
+          "message": "Successfully update a Application Client",
+          "data": {
+              "id": "AaiyAPdpYdesoKnqjj8HJqRn4T5titww",
+              "name": "name of application",
+              "client_id": "auto generated client id",
+              "app_type": "custom app",
+              "domain": "concat from tenant_name and tenant region",
+              "client_secret": "auto generated client secret",
+              "description": "description of application",
+              "logo_url": "url logo of application",
+              "token_auth_method": "default 'Post'",
+              "app_login_url": "url app login",
+              "callback_url": "url callback",
+              "logout_url": "url logout",
+              "web_origin": "url web origin",
+              "cors": "url cors",
+              "id_token_exp": "default integer",
+              "reuse_interval": "default integer",
+              "abs_lifetime": "default integer",
+              "inactivity_lifetime": "default integer",
+              "tenant_id": id tenant
+            }
+        }
+                  
+        Status Code 403 - Forbidden
 
-                        Status Code 404 - Not Found
-                        
-                        {
-                          "message": "Application not found",
-                          "data": ""
-                        }
+        {
+          "message": "You dont have access to this data",
+          "data": ""
+        }
 
-                        Status Code 500 - Internal Server Error
-                        
-                        {
-                          "message": "Internal Server Error",
-                          "data": ""
-                        }
+        Status Code 404 - Not Found
+
+        {
+          "message": "Application not found",
+          "data": ""
+        }
+
+        Status Code 500 - Internal Server Error
+
+        {
+          "message": "Internal Server Error",
+          "data": ""
+        }
                         "#}
                         </code>
                     </pre>        
@@ -1216,7 +1216,7 @@ pub fn app() -> Html {
 
 
 
-                        No Request Body Required
+        No Request Body Required
                         
                         
 
@@ -1235,7 +1235,7 @@ pub fn app() -> Html {
                         {r#"
 
 
-                        "access_token": "value from field 'token' on method POST /login"
+        "access_token": "value from field 'token' on method POST /login"
 
                         
                         "#}
@@ -1252,13 +1252,13 @@ pub fn app() -> Html {
                       <code class="json text-xs">
                         {r#"
 
-                        endpoint: /api/v2/clients/{id}
-                        example: /api/v2/clients/AaiyAPdpYdesoKnqjj8HJqRn4T5titww
+        endpoint: /api/v2/clients/{id}
+        example: /api/v2/clients/AaiyAPdpYdesoKnqjj8HJqRn4T5titww
 
 
-                        "id": "id of app"
+        "id": "id of app"
 
-                        
+                                
                         "#}
                         </code>
                     </pre>        
@@ -1273,53 +1273,53 @@ pub fn app() -> Html {
                       <code class="json text-xs">
                         {r#"
 
-                        Status Code 200 - Ok
+        Status Code 200 - Ok
 
-                        {
-                          "message": "Successfully delete the Application",
-                          "data": {
-                              "id": "AaiyAPdpYdesoKnqjj8HJqRn4T5titww",
-                              "name": "name of application",
-                              "client_id": "auto generated client id",
-                              "app_type": "custom app",
-                              "domain": "concat from tenant_name and tenant region",
-                              "client_secret": "auto generated client secret",
-                              "description": "description of application",
-                              "logo_url": "url logo of application",
-                              "token_auth_method": "default 'Post'",
-                              "app_login_url": "url app login",
-                              "callback_url": "url callback",
-                              "logout_url": "url logout",
-                              "web_origin": "url web origin",
-                              "cors": "url cors",
-                              "id_token_exp": "default integer",
-                              "reuse_interval": "default integer",
-                              "abs_lifetime": "default integer",
-                              "inactivity_lifetime": "default integer",
-                              "tenant_id": id tenant
-                            }
-                        }
-                                  
-                        Status Code 403 - Forbidden
-                        
-                        {
-                          "message": "You dont have access to this data",
-                          "data": ""
-                        }
+        {
+          "message": "Successfully delete the Application",
+          "data": {
+              "id": "AaiyAPdpYdesoKnqjj8HJqRn4T5titww",
+              "name": "name of application",
+              "client_id": "auto generated client id",
+              "app_type": "custom app",
+              "domain": "concat from tenant_name and tenant region",
+              "client_secret": "auto generated client secret",
+              "description": "description of application",
+              "logo_url": "url logo of application",
+              "token_auth_method": "default 'Post'",
+              "app_login_url": "url app login",
+              "callback_url": "url callback",
+              "logout_url": "url logout",
+              "web_origin": "url web origin",
+              "cors": "url cors",
+              "id_token_exp": "default integer",
+              "reuse_interval": "default integer",
+              "abs_lifetime": "default integer",
+              "inactivity_lifetime": "default integer",
+              "tenant_id": id tenant
+            }
+        }
+                  
+        Status Code 403 - Forbidden
 
-                        Status Code 404 - Not Found
-                        
-                        {
-                          "message": "Application not found",
-                          "data": ""
-                        }
+        {
+          "message": "You dont have access to this data",
+          "data": ""
+        }
 
-                        Status Code 500 - Internal Server Error
-                        
-                        {
-                          "message": "Internal Server Error",
-                          "data": ""
-                        }
+        Status Code 404 - Not Found
+
+        {
+          "message": "Application not found",
+          "data": ""
+        }
+
+        Status Code 500 - Internal Server Error
+
+        {
+          "message": "Internal Server Error",
+          "data": ""
+        }
                         "#}
                         </code>
                     </pre>        
@@ -1361,7 +1361,7 @@ pub fn app() -> Html {
 
 
 
-                        No Request Body Required
+        No Request Body Required
                         
                         
 
@@ -1380,7 +1380,7 @@ pub fn app() -> Html {
                         {r#"
 
 
-                        "access_token": "value from field 'token' on method POST /login"
+        "access_token": "value from field 'token' on method POST /login"
 
                         
                         "#}
@@ -1397,32 +1397,32 @@ pub fn app() -> Html {
                       <code class="json text-xs">
                         {r#"
 
-                        Status Code 200 - Ok
+        Status Code 200 - Ok
 
-                        {
-                          "message": "Api fetched",
-                          "data": [
-                              {
-                                "id": "api id",
-                                "name": "name API",
-                                "api_type": "type API",
-                                "identifier": "url identifier API"
-                              },
-                              {
-                                "id": "api id",
-                                "name": "name API",
-                                "api_type": "type API",
-                                "identifier": "url identifier API"
-                              }
-                            ]
-                        }
+        {
+          "message": "Api fetched",
+          "data": [
+              {
+                "id": "api id",
+                "name": "name API",
+                "api_type": "type API",
+                "identifier": "url identifier API"
+              },
+              {
+                "id": "api id",
+                "name": "name API",
+                "api_type": "type API",
+                "identifier": "url identifier API"
+              }
+            ]
+        }
 
-                        Status Code 500 - Internal Server Error
-                        
-                        {
-                          "message": "Internal Server Error",
-                          "data": ""
-                        }
+        Status Code 500 - Internal Server Error
+
+        {
+          "message": "Internal Server Error",
+          "data": ""
+        }
                         "#}
                         </code>
                     </pre>        
@@ -1460,11 +1460,11 @@ pub fn app() -> Html {
                     <pre>
                       <code class="json text-xs">
                         {r#"
-                        {
-                          "name": "name API",
-                          "identifier": "url identifier API",
-                          "sign_algorithm": "signature algorithm for API"
-                        }
+        {
+          "name": "name API",
+          "identifier": "url identifier API",
+          "sign_algorithm": "signature algorithm for API"
+        }
                         "#}
                         </code>
                     </pre>          
@@ -1480,7 +1480,7 @@ pub fn app() -> Html {
                         {r#"
 
 
-                        "access_token": "value from field 'token' on method POST /login"
+        "access_token": "value from field 'token' on method POST /login"
 
                         
                         "#}
@@ -1497,33 +1497,33 @@ pub fn app() -> Html {
                       <code class="json text-xs">
                         {r#"
 
-                        Status Code 201 - Created
+        Status Code 201 - Created
 
-                        {
-                          "message": "Succesfully create api",
-                          "data": ""
-                        }
-                                  
-                        Status Code 400 - Bad Request
-                        
-                        {
-                          "message": "Parse error",
-                          "data": ""
-                        }
+        {
+          "message": "Succesfully create api",
+          "data": ""
+        }
+                  
+        Status Code 400 - Bad Request
 
-                        Status Code 403 - Forbidden
-                        
-                        {
-                          "message": "You dont have access to this data",
-                          "data": ""
-                        }
+        {
+          "message": "Parse error",
+          "data": ""
+        }
 
-                        Status Code 500 - Internal Server Error
-                        
-                        {
-                          "message": "Internal Server Error",
-                          "data": ""
-                        }
+        Status Code 403 - Forbidden
+
+        {
+          "message": "You dont have access to this data",
+          "data": ""
+        }
+
+        Status Code 500 - Internal Server Error
+
+        {
+          "message": "Internal Server Error",
+          "data": ""
+        }
 
                         "#}
                         </code>
@@ -1566,7 +1566,7 @@ pub fn app() -> Html {
 
 
 
-                        No Request Body Required
+        No Request Body Required
                         
                         
 
@@ -1602,13 +1602,13 @@ pub fn app() -> Html {
                       <code class="json text-xs">
                         {r#"
 
-                        endpoint: /api/v2/resource-server/{id}
-                        example: /api/v2/resource-server/AaiyAPdpYdesoKnqjj8HJqRn4T5titww
+        endpoint: /api/v2/resource-server/{id}
+        example: /api/v2/resource-server/AaiyAPdpYdesoKnqjj8HJqRn4T5titww
 
 
-                        "id": "id of API"
+        "id": "id of API"
 
-                        
+        
                         "#}
                         </code>
                     </pre>        
@@ -1623,47 +1623,47 @@ pub fn app() -> Html {
                       <code class="json text-xs">
                         {r#"
 
-                        Status Code 200 - Ok
+        Status Code 200 - Ok
 
-                        {
-                          "message": "Api loaded",
-                          "data": {
-                            "id": "api id",
-                            "name": "name api",
-                            "api_id": "auto generated id",
-                            "api_type": "Custom API",
-                            "identifier": "url identifier",
-                            "token_exp": integer,
-                            "token_exp_browser": integer,
-                            "sign_algorithm": "algorithm signing",
-                            "rbac": boolean,
-                            "permission_acc_token": boolean,
-                            "allow_skip_user": boolean,
-                            "allow_off_acc": boolean,
-                            "tenant_id": 1
-                          }
-                        }
-                                  
-                        Status Code 403 - Forbidden
-                        
-                        {
-                          "message": "You dont have access to this data",
-                          "data": ""
-                        }
+        {
+          "message": "Api loaded",
+          "data": {
+            "id": "api id",
+            "name": "name api",
+            "api_id": "auto generated id",
+            "api_type": "Custom API",
+            "identifier": "url identifier",
+            "token_exp": integer,
+            "token_exp_browser": integer,
+            "sign_algorithm": "algorithm signing",
+            "rbac": boolean,
+            "permission_acc_token": boolean,
+            "allow_skip_user": boolean,
+            "allow_off_acc": boolean,
+            "tenant_id": 1
+          }
+        }
+                  
+        Status Code 403 - Forbidden
+        
+        {
+          "message": "You dont have access to this data",
+          "data": ""
+        }
 
-                        Status Code 404 - Not Found
-                        
-                        {
-                          "message": "Api not found",
-                          "data": ""
-                        }
+        Status Code 404 - Not Found
+        
+        {
+          "message": "Api not found",
+          "data": ""
+        }
 
-                        Status Code 500 - Internal Server Error
-                        
-                        {
-                          "message": "Internal Server Error",
-                          "data": ""
-                        }
+        Status Code 500 - Internal Server Error
+        
+        {
+          "message": "Internal Server Error",
+          "data": ""
+        }
                         "#}
                         </code>
                     </pre>        
@@ -1703,15 +1703,15 @@ pub fn app() -> Html {
                     <pre>
                       <code class="json text-xs">
                         {r#"
-                        {
-                          "name": "name app",
-                          "token_exp": integer,
-                          "token_exp_browser": integer,
-                          "rbac": boolean,
-                          "permission_acc_token": boolean,
-                          "allow_skip_user": boolean,
-                          "allow_off_acc": boolean,
-                        }
+        {
+          "name": "name app",
+          "token_exp": integer,
+          "token_exp_browser": integer,
+          "rbac": boolean,
+          "permission_acc_token": boolean,
+          "allow_skip_user": boolean,
+          "allow_off_acc": boolean,
+        }
                         "#}
                         </code>
                     </pre>      
@@ -1727,7 +1727,7 @@ pub fn app() -> Html {
                         {r#"
 
 
-                        "access_token": "value from field 'token' on method POST /login"
+        "access_token": "value from field 'token' on method POST /login"
 
                         
                         "#}
@@ -1744,13 +1744,13 @@ pub fn app() -> Html {
                       <code class="json text-xs">
                         {r#"
 
-                        endpoint: /api/v2/resource-servers/{id}
-                        example: /api/v2/resource-servers/AaiyAPdpYdesoKnqjj8HJqRn4T5titww
+        endpoint: /api/v2/resource-servers/{id}
+        example: /api/v2/resource-servers/AaiyAPdpYdesoKnqjj8HJqRn4T5titww
 
 
-                        "id": "id of api"
+        "id": "id of api"
 
-                        
+        
                         "#}
                         </code>
                     </pre>        
@@ -1765,54 +1765,54 @@ pub fn app() -> Html {
                       <code class="json text-xs">
                         {r#"
 
-                        Status Code 200 - Ok
+        Status Code 200 - Ok
 
-                        {
-                          "message": "Successfully update Api",
-                            "data": {
-                              "id": 1,
-                              "name": "name api",
-                              "api_id": "auto generated id",
-                              "api_type": "Custom API",
-                              "identifier": "url identifier",
-                              "token_exp": integer,
-                              "token_exp_browser": integer,
-                              "sign_algorithm": "algorithm signing",
-                              "rbac": boolean,
-                              "permission_acc_token": boolean,
-                              "allow_skip_user": boolean,
-                              "allow_off_acc": boolean,
-                              "tenant_id": 1
-                            }
-                        }
+        {
+          "message": "Successfully update Api",
+            "data": {
+              "id": 1,
+              "name": "name api",
+              "api_id": "auto generated id",
+              "api_type": "Custom API",
+              "identifier": "url identifier",
+              "token_exp": integer,
+              "token_exp_browser": integer,
+              "sign_algorithm": "algorithm signing",
+              "rbac": boolean,
+              "permission_acc_token": boolean,
+              "allow_skip_user": boolean,
+              "allow_off_acc": boolean,
+              "tenant_id": 1
+            }
+        }
 
-                        Status Code 400 - Bad Request
-                        
-                        {
-                          "message": "Parse error",
-                          "data": ""
-                        }
+        Status Code 400 - Bad Request
+        
+        {
+          "message": "Parse error",
+          "data": ""
+        }
 
-                        Status Code 403 - Forbidden
-                        
-                        {
-                          "message": "You dont have access to this data",
-                          "data": ""
-                        }
+        Status Code 403 - Forbidden
+        
+        {
+          "message": "You dont have access to this data",
+          "data": ""
+        }
 
-                        Status Code 404 - Not Found
-                        
-                        {
-                          "message": "Api not found",
-                          "data": ""
-                        }
+        Status Code 404 - Not Found
+        
+        {
+          "message": "Api not found",
+          "data": ""
+        }
 
-                        Status Code 500 - Internal Server Error
-                        
-                        {
-                          "message": "Internal Server Error",
-                          "data": ""
-                        }
+        Status Code 500 - Internal Server Error
+        
+        {
+          "message": "Internal Server Error",
+          "data": ""
+        }
                         "#}
                         </code>
                     </pre>        
@@ -1852,7 +1852,7 @@ pub fn app() -> Html {
 
 
 
-                        No Request Body Required
+        No Request Body Required
                         
                         
 
@@ -1871,7 +1871,7 @@ pub fn app() -> Html {
                         {r#"
 
 
-                        "access_token": "value from field 'token' on method POST /login"
+        "access_token": "value from field 'token' on method POST /login"
 
                         
                         "#}
@@ -1888,13 +1888,13 @@ pub fn app() -> Html {
                       <code class="json text-xs">
                         {r#"
 
-                        endpoint: /api/v2/resource-servers/{id}
-                        example: /api/v2/resource-servers/AaiyAPdpYdesoKnqjj8HJqRn4T5titww
+        endpoint: /api/v2/resource-servers/{id}
+        example: /api/v2/resource-servers/AaiyAPdpYdesoKnqjj8HJqRn4T5titww
 
 
-                        "id": "id of api"
+        "id": "id of api"
 
-                        
+        
                         "#}
                         </code>
                     </pre>        
@@ -1909,41 +1909,41 @@ pub fn app() -> Html {
                       <code class="json text-xs">
                         {r#"
 
-                        Status Code 200 - Ok
+        Status Code 200 - Ok
 
-                        {
-                          "message": "Api deleted",
-                          "data": ""
-                        }
+        {
+          "message": "Api deleted",
+          "data": ""
+        }
 
-                                  
-                        Status Code 403 - Forbidden
-                        
-                        {
-                          "message": "You dont have access to this data",
-                          "data": ""
-                        }
+                  
+        Status Code 403 - Forbidden
+        
+        {
+          "message": "You dont have access to this data",
+          "data": ""
+        }
 
-                        Status Code 403 - Forbidden
-                        
-                        {
-                          "message": "You dont have access to this data",
-                          "data": ""
-                        }
+        Status Code 403 - Forbidden
+        
+        {
+          "message": "You dont have access to this data",
+          "data": ""
+        }
 
-                        Status Code 404 - Not Found
-                        
-                        {
-                          "message": "Api not found",
-                          "data": ""
-                        }
+        Status Code 404 - Not Found
+        
+        {
+          "message": "Api not found",
+          "data": ""
+        }
 
-                        Status Code 500 - Internal Server Error
-                        
-                        {
-                          "message": "Internal Server Error",
-                          "data": ""
-                        }
+        Status Code 500 - Internal Server Error
+        
+        {
+          "message": "Internal Server Error",
+          "data": ""
+        }
                         "#}
                         </code>
                     </pre>        
