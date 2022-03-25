@@ -114,10 +114,6 @@ strong {
   font-weight: bolder;
 }
 
-.hljs{
-  background: #4e575e
-}
-
 /*
 1. Use the user's configured `mono` font family by default.
 2. Correct the odd `em` font sizing in all browsers.
@@ -1115,6 +1111,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hljs {
+  background: #4e575e
 }
 
 .hover\:border-blue-600:hover {
