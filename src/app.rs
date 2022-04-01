@@ -2077,1671 +2077,1671 @@ pub fn app() -> Html {
                 </div>
               </div>
 
-              //create A User
-              <div class="grid grid-cols-2">
-                // description
-                <div class="relative items-center w-full mx-auto">
-                  <div class="grid grid-cols-1 ">
-                    <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
-                      <div class="p-4">
-                        <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Create a User"}</h4>
-                        <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-green-400 rounded-full">{"POST"}</span>
-                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/users"}</span>
-                        <p class="mt-3 text-base leading-relaxed text-gray-500">
-                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"Create a new user for a given database or passwordless connection."}</span>
-                        </p>
-                        <br/>
-                        <p class="mt-3 text-base leading-relaxed text-gray-500">
-                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"Note: connection is required but other parameters such as email and password are dependent upon the type of connection."}</span>
-                        </p>
-                        </div>
-                      </div>
-                    </div>
-                </div>
+        //       //create A User
+        //       <div class="grid grid-cols-2">
+        //         // description
+        //         <div class="relative items-center w-full mx-auto">
+        //           <div class="grid grid-cols-1 ">
+        //             <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
+        //               <div class="p-4">
+        //                 <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Create a User"}</h4>
+        //                 <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-green-400 rounded-full">{"POST"}</span>
+        //                 <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/users"}</span>
+        //                 <p class="mt-3 text-base leading-relaxed text-gray-500">
+        //                 <span class="mt-3 text-base leading-relaxed text-gray-500">{"Create a new user for a given database or passwordless connection."}</span>
+        //                 </p>
+        //                 <br/>
+        //                 <p class="mt-3 text-base leading-relaxed text-gray-500">
+        //                 <span class="mt-3 text-base leading-relaxed text-gray-500">{"Note: connection is required but other parameters such as email and password are dependent upon the type of connection."}</span>
+        //                 </p>
+        //                 </div>
+        //               </div>
+        //             </div>
+        //         </div>
                 
-                // response section
-                <div class="relative items-center w-full mx-auto bg-gray-500">
-                  // Request body section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
-                      <h4 class="text-base font-medium leading-none text-yellow-500 tracking-tighter text-white lg:text-base ">{"Request Body Type : application/json"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
-        {
-          "email": "email user",
-          "password": "password user",
-          "connection": "connection user: default -> Username-Password-Authentication",
-        }
-                        "#}
-                        </code>
-                    </pre>          
-                  </div>
+        //         // response section
+        //         <div class="relative items-center w-full mx-auto bg-gray-500">
+        //           // Request body section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
+        //               <h4 class="text-base font-medium leading-none text-yellow-500 tracking-tighter text-white lg:text-base ">{"Request Body Type : application/json"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
+        // {
+        //   "email": "email user",
+        //   "password": "password user",
+        //   "connection": "connection user: default -> Username-Password-Authentication",
+        // }
+        //                 "#}
+        //                 </code>
+        //             </pre>          
+        //           </div>
                   
-                  // Request Headers Section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // Request Headers Section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
 
-        "access_token": "value from field 'token' on method POST /login"
+        // "access_token": "value from field 'token' on method POST /login"
 
                         
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
                   
-                  // Response section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // Response section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
-        Status Code 201 - Created
+        // Status Code 201 - Created
 
-        {
-          "message": "Users created",
-          "data": {
-            "created_at": "timestamp",
-            "email": "email user",
-            "identities": [
-              {
-                "connection": "connection user: default -> Username-Password-Authentication",
-                "user_id": "user id",
-                "provider": "default -> domain",
-                "is_social": boolean
-              }
-            ],
-            "name": "name user from email",
-            "picture": "url picture user",
-            "updated_at": "timestamp",
-            "user_id": "concat from field provider and user_id",
-            "blocked": boolean,
-            "blocked_for": [],
-            "guardian_authenticators": []
-          }
-        }
+        // {
+        //   "message": "Users created",
+        //   "data": {
+        //     "created_at": "timestamp",
+        //     "email": "email user",
+        //     "identities": [
+        //       {
+        //         "connection": "connection user: default -> Username-Password-Authentication",
+        //         "user_id": "user id",
+        //         "provider": "default -> domain",
+        //         "is_social": boolean
+        //       }
+        //     ],
+        //     "name": "name user from email",
+        //     "picture": "url picture user",
+        //     "updated_at": "timestamp",
+        //     "user_id": "concat from field provider and user_id",
+        //     "blocked": boolean,
+        //     "blocked_for": [],
+        //     "guardian_authenticators": []
+        //   }
+        // }
 
-        Status Code 400 - Bad Request
+        // Status Code 400 - Bad Request
 
-        {
-          "message": "Parse error",
-          "data": ""
-        }
+        // {
+        //   "message": "Parse error",
+        //   "data": ""
+        // }
 
-        Status Code 403 - Forbidden
+        // Status Code 403 - Forbidden
 
-        {
-          "message": "You dont have access to this data",
-          "data": ""
-        }
+        // {
+        //   "message": "You dont have access to this data",
+        //   "data": ""
+        // }
 
-        Status Code 500 - Internal Server Error
+        // Status Code 500 - Internal Server Error
 
-        {
-          "message": "Internal Server Error",
-          "data": ""
-        }
+        // {
+        //   "message": "Internal Server Error",
+        //   "data": ""
+        // }
 
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
 
-                </div>
-              </div>
+        //         </div>
+        //       </div>
 
-              // Get Detail Users Section
-              <div class="grid grid-cols-2">
-                // description
-                <div class="relative items-center w-full mx-auto">
-                  <div class="grid grid-cols-1 ">
-                    <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
-                      <div class="p-4">
-                        <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Get a User"}</h4>
-                        <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-violet-400 rounded-full">{"GET"}</span>
-                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/users/{id}"}</span>
-                        <p class="mt-3 text-base leading-relaxed text-gray-500">
-                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"Retrieve user details. A list of fields to include or exclude may also be specified."}</span>
-                        </p>
-                        </div>
-                      </div>
-                    </div>
-                </div>
+        //       // Get Detail Users Section
+        //       <div class="grid grid-cols-2">
+        //         // description
+        //         <div class="relative items-center w-full mx-auto">
+        //           <div class="grid grid-cols-1 ">
+        //             <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
+        //               <div class="p-4">
+        //                 <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Get a User"}</h4>
+        //                 <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-violet-400 rounded-full">{"GET"}</span>
+        //                 <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/users/{id}"}</span>
+        //                 <p class="mt-3 text-base leading-relaxed text-gray-500">
+        //                 <span class="mt-3 text-base leading-relaxed text-gray-500">{"Retrieve user details. A list of fields to include or exclude may also be specified."}</span>
+        //                 </p>
+        //                 </div>
+        //               </div>
+        //             </div>
+        //         </div>
                 
-                // response section
-                <div class="relative items-center w-full mx-auto bg-gray-500">
-                  // Request body section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-lg">
-                        {r#"
+        //         // response section
+        //         <div class="relative items-center w-full mx-auto bg-gray-500">
+        //           // Request body section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-lg">
+        //                 {r#"
 
 
 
-        No Request Body Required
+        // No Request Body Required
                         
                         
 
-                        "#}
-                        </code>
-                    </pre>      
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>      
+        //           </div>
                   
-                  // Request Headers Section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // Request Headers Section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
 
-        "access_token": "value from field 'token' on method POST /login"
+        // "access_token": "value from field 'token' on method POST /login"
 
                         
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
                   
-                  // request parameter section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Parameters Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // request parameter section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Parameters Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
-        endpoint: /api/v2/users/{id}
-        example: /api/v2/users/AaiyAPdpYdesoKnqjj8HJqRn4T5titww
+        // endpoint: /api/v2/users/{id}
+        // example: /api/v2/users/AaiyAPdpYdesoKnqjj8HJqRn4T5titww
 
 
-        "id": "id of User"
+        // "id": "id of User"
 
         
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
                   
-                  // Response section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // Response section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
-        Status Code 200 - Ok
+        // Status Code 200 - Ok
 
-        {
-          "message": "Ok",
-          "data": {
-            "created_at": "timestamp",
-            "email": "email user",
-            "identities": [
-              {
-                "connection": "connection user: default -> Username-Password-Authentication",
-                "user_id": "user id",
-                "provider": "default -> domain",
-                "is_social": boolean
-              }
-            ],
-            "name": "name from email",
-            "picture": "url picture of user",
-            "updated_at": "timestamp",
-            "user_id": "concat from field provider and user_id",
-            "blocked": boolean,
-            "blocked_for": [],
-            "guardian_authenticators": []
-          }
-        }
+        // {
+        //   "message": "Ok",
+        //   "data": {
+        //     "created_at": "timestamp",
+        //     "email": "email user",
+        //     "identities": [
+        //       {
+        //         "connection": "connection user: default -> Username-Password-Authentication",
+        //         "user_id": "user id",
+        //         "provider": "default -> domain",
+        //         "is_social": boolean
+        //       }
+        //     ],
+        //     "name": "name from email",
+        //     "picture": "url picture of user",
+        //     "updated_at": "timestamp",
+        //     "user_id": "concat from field provider and user_id",
+        //     "blocked": boolean,
+        //     "blocked_for": [],
+        //     "guardian_authenticators": []
+        //   }
+        // }
 
-        Status Code 403 - Forbidden
+        // Status Code 403 - Forbidden
         
-        {
-          "message": "You dont have access to this data",
-          "data": ""
-        }
+        // {
+        //   "message": "You dont have access to this data",
+        //   "data": ""
+        // }
 
-        Status Code 404 - Not Found
+        // Status Code 404 - Not Found
         
-        {
-          "message": "Users not found",
-          "data": ""
-        }
+        // {
+        //   "message": "Users not found",
+        //   "data": ""
+        // }
 
-        Status Code 500 - Internal Server Error
+        // Status Code 500 - Internal Server Error
         
-        {
-          "message": "Internal Server Error",
-          "data": ""
-        }
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        // {
+        //   "message": "Internal Server Error",
+        //   "data": ""
+        // }
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
 
-                </div>
-              </div>
+        //         </div>
+        //       </div>
 
-              // Patch Update a User
-              <div class="grid grid-cols-2">
-                // description
-                <div class="relative items-center w-full mx-auto">
-                  <div class="grid grid-cols-1 ">
-                    <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
-                      <div class="p-4">
-                        <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Update a User"}</h4>
-                        <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-yellow-400 rounded-full">{"PATCH"}</span>
-                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/users/{id}"}</span>
-                        <p class="mt-3 text-base leading-relaxed text-gray-500">
-                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"Update a user."}</span>
-                        </p>
-                        </div>
-                      </div>
-                    </div>
-                </div>
+        //       // Patch Update a User
+        //       <div class="grid grid-cols-2">
+        //         // description
+        //         <div class="relative items-center w-full mx-auto">
+        //           <div class="grid grid-cols-1 ">
+        //             <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
+        //               <div class="p-4">
+        //                 <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Update a User"}</h4>
+        //                 <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-yellow-400 rounded-full">{"PATCH"}</span>
+        //                 <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/users/{id}"}</span>
+        //                 <p class="mt-3 text-base leading-relaxed text-gray-500">
+        //                 <span class="mt-3 text-base leading-relaxed text-gray-500">{"Update a user."}</span>
+        //                 </p>
+        //                 </div>
+        //               </div>
+        //             </div>
+        //         </div>
                 
-                // response section
-                <div class="relative items-center w-full mx-auto bg-gray-500">
-                  // Request body section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
-                      <h4 class="text-base font-medium leading-none text-yellow-500 tracking-tighter text-white lg:text-base ">{"Request Body Type : application/json"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
-        {
-          "blocked": false,
-          "email_verified": false,
-          "email": "john.doe@gmail.com",
-          "phone_number": "+199999999999999",
-          "phone_verified": false,
-          "user_metadata": {},
-          "app_metadata": {},
-          "given_name": "John",
-          "family_name": "Doe",
-          "name": "John Doe",
-          "nickname": "Johnny",
-          "picture": "https://secure.gravatar.com/avatar/15626c5e0c749cb912f9d1ad48dba440?s=480&r=pg&d=https%3A%2F%2Fssl.gstatic.com%2Fs2%2Fprofiles%2Fimages%2Fsilhouette80.png",
-          "verify_email": false,
-          "verify_phone_number": false,
-          "password": "secret",
-          "connection": "Initial-Connection",
-          "client_id": "DaM8bokEXBWrTUFCiJjWn50jei6ardyX",
-          "username": "johndoe"
-        }
-                        "#}
-                        </code>
-                    </pre>      
-                  </div>
+        //         // response section
+        //         <div class="relative items-center w-full mx-auto bg-gray-500">
+        //           // Request body section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
+        //               <h4 class="text-base font-medium leading-none text-yellow-500 tracking-tighter text-white lg:text-base ">{"Request Body Type : application/json"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
+        // {
+        //   "blocked": false,
+        //   "email_verified": false,
+        //   "email": "john.doe@gmail.com",
+        //   "phone_number": "+199999999999999",
+        //   "phone_verified": false,
+        //   "user_metadata": {},
+        //   "app_metadata": {},
+        //   "given_name": "John",
+        //   "family_name": "Doe",
+        //   "name": "John Doe",
+        //   "nickname": "Johnny",
+        //   "picture": "https://secure.gravatar.com/avatar/15626c5e0c749cb912f9d1ad48dba440?s=480&r=pg&d=https%3A%2F%2Fssl.gstatic.com%2Fs2%2Fprofiles%2Fimages%2Fsilhouette80.png",
+        //   "verify_email": false,
+        //   "verify_phone_number": false,
+        //   "password": "secret",
+        //   "connection": "Initial-Connection",
+        //   "client_id": "DaM8bokEXBWrTUFCiJjWn50jei6ardyX",
+        //   "username": "johndoe"
+        // }
+        //                 "#}
+        //                 </code>
+        //             </pre>      
+        //           </div>
                   
-                  // Request Headers Section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // Request Headers Section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
 
-        "access_token": "value from field 'token' on method POST /login"
+        // "access_token": "value from field 'token' on method POST /login"
 
                         
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
                   
-                  // request parameter section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Parameters Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // request parameter section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Parameters Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
-        endpoint: /api/v2/users/{id}
-        example: /api/v2/users/AaiyAPdpYdesoKnqjj8HJqRn4T5titww
+        // endpoint: /api/v2/users/{id}
+        // example: /api/v2/users/AaiyAPdpYdesoKnqjj8HJqRn4T5titww
 
 
-        "id": "id of user"
+        // "id": "id of user"
 
         
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
                   
-                  // Response section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // Response section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
-        Status Code 200 - Ok
+        // Status Code 200 - Ok
 
-        {
-          "message": "User name updated successfully",
-          "data": ""
-        }
+        // {
+        //   "message": "User name updated successfully",
+        //   "data": ""
+        // }
 
-        Status Code 403 - Forbidden
+        // Status Code 403 - Forbidden
         
-        {
-          "message": "You dont have access to this data",
-          "data": ""
-        }
+        // {
+        //   "message": "You dont have access to this data",
+        //   "data": ""
+        // }
 
-        Status Code 404 - Not Found
+        // Status Code 404 - Not Found
         
-        {
-          "message": "User not found",
-          "data": ""
-        }
+        // {
+        //   "message": "User not found",
+        //   "data": ""
+        // }
 
-        Status Code 500 - Internal Server Error
+        // Status Code 500 - Internal Server Error
         
-        {
-          "message": "Internal Server Error",
-          "data": ""
-        }
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        // {
+        //   "message": "Internal Server Error",
+        //   "data": ""
+        // }
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
 
-                </div>
-              </div>
+        //         </div>
+        //       </div>
 
-              // Delete a User
-              <div class="grid grid-cols-2">
-                // description
-                <div class="relative items-center w-full mx-auto">
-                  <div class="grid grid-cols-1 ">
-                    <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
-                      <div class="p-4">
-                        <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Delete a user."}</h4>
-                        <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-red-400 rounded-full">{"DELETE"}</span>
-                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/users/{id}"}</span>
-                        <p class="mt-3 text-base leading-relaxed text-gray-500">
-                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"Delete a user."}</span>
-                        </p>
-                        </div>
-                      </div>
-                    </div>
-                </div>
+        //       // Delete a User
+        //       <div class="grid grid-cols-2">
+        //         // description
+        //         <div class="relative items-center w-full mx-auto">
+        //           <div class="grid grid-cols-1 ">
+        //             <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
+        //               <div class="p-4">
+        //                 <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Delete a user."}</h4>
+        //                 <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-red-400 rounded-full">{"DELETE"}</span>
+        //                 <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/users/{id}"}</span>
+        //                 <p class="mt-3 text-base leading-relaxed text-gray-500">
+        //                 <span class="mt-3 text-base leading-relaxed text-gray-500">{"Delete a user."}</span>
+        //                 </p>
+        //                 </div>
+        //               </div>
+        //             </div>
+        //         </div>
                 
-                // response section
-                <div class="relative items-center w-full mx-auto bg-gray-500">
-                  // Request body section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-lg">
-                        {r#"
+        //         // response section
+        //         <div class="relative items-center w-full mx-auto bg-gray-500">
+        //           // Request body section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-lg">
+        //                 {r#"
 
 
 
-        No Request Body Required
+        // No Request Body Required
                         
                         
 
-                        "#}
-                        </code>
-                    </pre>      
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>      
+        //           </div>
                   
-                  // Request Headers Section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // Request Headers Section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
 
-        "access_token": "value from field 'token' on method POST /login"
+        // "access_token": "value from field 'token' on method POST /login"
 
                         
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
                   
-                  // request parameter section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Parameters Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // request parameter section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Parameters Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
-        endpoint: /api/v2/users/{id}
-        example: /api/v2/users/AaiyAPdpYdesoKnqjj8HJqRn4T5titww
+        // endpoint: /api/v2/users/{id}
+        // example: /api/v2/users/AaiyAPdpYdesoKnqjj8HJqRn4T5titww
 
 
-        "id": "id of a users"
+        // "id": "id of a users"
 
         
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
                   
-                  // Response section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // Response section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
-        Status Code 200 - Ok
+        // Status Code 200 - Ok
 
-        {
-          "message": "User deleted successfully",
-          "data": "email of user deleted"
-        }
+        // {
+        //   "message": "User deleted successfully",
+        //   "data": "email of user deleted"
+        // }
                   
-        Status Code 403 - Forbidden
+        // Status Code 403 - Forbidden
         
-        {
-          "message": "You dont have access to this data",
-          "data": ""
-        }
+        // {
+        //   "message": "You dont have access to this data",
+        //   "data": ""
+        // }
 
-        Status Code 404 - Not Found
+        // Status Code 404 - Not Found
         
-        {
-          "message": "Users not found",
-          "data": ""
-        }
+        // {
+        //   "message": "Users not found",
+        //   "data": ""
+        // }
 
-        Status Code 500 - Internal Server Error
+        // Status Code 500 - Internal Server Error
         
-        {
-          "message": "Internal Server Error",
-          "data": ""
-        }
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        // {
+        //   "message": "Internal Server Error",
+        //   "data": ""
+        // }
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
 
-                </div>
-              </div>
+        //         </div>
+        //       </div>
 
-              // Get a User Role Section
-              <div class="grid grid-cols-2">
-                // description
-                <div class="relative items-center w-full mx-auto">
-                  <div class="grid grid-cols-1 ">
-                    <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
-                      <div class="p-4">
-                        <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Get a user's roles"}</h4>
-                        <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-violet-400 rounded-full">{"GET"}</span>
-                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/users/{id}/roles"}</span>
-                        <p class="mt-3 text-base leading-relaxed text-gray-500">
-                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"List the the roles associated with a user."}</span>
-                        </p>
-                        </div>
-                      </div>
-                    </div>
-                </div>
+        //       // Get a User Role Section
+        //       <div class="grid grid-cols-2">
+        //         // description
+        //         <div class="relative items-center w-full mx-auto">
+        //           <div class="grid grid-cols-1 ">
+        //             <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
+        //               <div class="p-4">
+        //                 <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Get a user's roles"}</h4>
+        //                 <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-violet-400 rounded-full">{"GET"}</span>
+        //                 <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/users/{id}/roles"}</span>
+        //                 <p class="mt-3 text-base leading-relaxed text-gray-500">
+        //                 <span class="mt-3 text-base leading-relaxed text-gray-500">{"List the the roles associated with a user."}</span>
+        //                 </p>
+        //                 </div>
+        //               </div>
+        //             </div>
+        //         </div>
                 
-                // response section
-                <div class="relative items-center w-full mx-auto bg-gray-500">
-                  // Request body section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-lg">
-                        {r#"
+        //         // response section
+        //         <div class="relative items-center w-full mx-auto bg-gray-500">
+        //           // Request body section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-lg">
+        //                 {r#"
 
 
 
-        No Request Body Required
+        // No Request Body Required
                         
                         
 
-                        "#}
-                        </code>
-                    </pre>      
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>      
+        //           </div>
                   
-                  // Request Headers Section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // Request Headers Section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
 
-        "access_token": "value from field 'token' on method POST /login"
+        // "access_token": "value from field 'token' on method POST /login"
 
                         
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
                   
-                  // request parameter section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Parameters Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // request parameter section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Parameters Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
-        endpoint: /api/v2/users/{id}/roles
-        example: /api/v2/users/AaiyAPdpYdesoKnqjj8HJqRn4T5titww/roles
+        // endpoint: /api/v2/users/{id}/roles
+        // example: /api/v2/users/AaiyAPdpYdesoKnqjj8HJqRn4T5titww/roles
 
 
-        "id": "id of User"
+        // "id": "id of User"
 
         
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
                   
-                  // Response section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // Response section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
-        Status Code 200 - Ok
+        // Status Code 200 - Ok
 
-        {
-          "message": "Ok",
-          "data": [
-            {
-              "id": 1,
-              "user_id": id of user on table user,
-              "role_id": id of role on table role,
-              "role_identity": "role identity",
-              "name": "name role",
-              "description": "description role"
-            },
-            {
-              "id": 2,
-              "user_id": id of user on table user,
-              "role_id": id of role on table role,
-              "role_identity": "role identity",
-              "name": "name role",
-              "description": "description role"
-            },
-          ]
-        }
+        // {
+        //   "message": "Ok",
+        //   "data": [
+        //     {
+        //       "id": 1,
+        //       "user_id": id of user on table user,
+        //       "role_id": id of role on table role,
+        //       "role_identity": "role identity",
+        //       "name": "name role",
+        //       "description": "description role"
+        //     },
+        //     {
+        //       "id": 2,
+        //       "user_id": id of user on table user,
+        //       "role_id": id of role on table role,
+        //       "role_identity": "role identity",
+        //       "name": "name role",
+        //       "description": "description role"
+        //     },
+        //   ]
+        // }
 
 
-        Status Code 403 - Forbidden
+        // Status Code 403 - Forbidden
         
-        {
-          "message": "You dont have access to this data",
-          "data": ""
-        }
+        // {
+        //   "message": "You dont have access to this data",
+        //   "data": ""
+        // }
 
-        Status Code 404 - Not Found
+        // Status Code 404 - Not Found
         
-        {
-          "message": "Users not found",
-          "data": ""
-        }
+        // {
+        //   "message": "Users not found",
+        //   "data": ""
+        // }
 
-        Status Code 500 - Internal Server Error
+        // Status Code 500 - Internal Server Error
         
-        {
-          "message": "Internal Server Error",
-          "data": ""
-        }
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        // {
+        //   "message": "Internal Server Error",
+        //   "data": ""
+        // }
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
 
-                </div>
-              </div>
+        //         </div>
+        //       </div>
 
-              // Create and assign role to a user section
-              <div class="grid grid-cols-2">
-                // description
-                <div class="relative items-center w-full mx-auto">
-                  <div class="grid grid-cols-1 ">
-                    <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
-                      <div class="p-4">
-                        <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Assign roles to a user"}</h4>
-                        <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-green-400 rounded-full">{"POST"}</span>
-                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/users/{id}/roles"}</span>
-                        <p class="mt-3 text-base leading-relaxed text-gray-500">
-                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"Associate roles with a user."}</span>
-                        </p>
-                        </div>
-                      </div>
-                    </div>
-                </div>
+        //       // Create and assign role to a user section
+        //       <div class="grid grid-cols-2">
+        //         // description
+        //         <div class="relative items-center w-full mx-auto">
+        //           <div class="grid grid-cols-1 ">
+        //             <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
+        //               <div class="p-4">
+        //                 <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Assign roles to a user"}</h4>
+        //                 <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-green-400 rounded-full">{"POST"}</span>
+        //                 <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/users/{id}/roles"}</span>
+        //                 <p class="mt-3 text-base leading-relaxed text-gray-500">
+        //                 <span class="mt-3 text-base leading-relaxed text-gray-500">{"Associate roles with a user."}</span>
+        //                 </p>
+        //                 </div>
+        //               </div>
+        //             </div>
+        //         </div>
                 
-                // response section
-                <div class="relative items-center w-full mx-auto bg-gray-500">
-                  // Request body section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
-                      <h4 class="text-base font-medium leading-none text-yellow-500 tracking-tighter text-white lg:text-base ">{"Request Body Type : application/json"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
-        {
-          "role_id": "id role for assign user",
-        }
+        //         // response section
+        //         <div class="relative items-center w-full mx-auto bg-gray-500">
+        //           // Request body section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
+        //               <h4 class="text-base font-medium leading-none text-yellow-500 tracking-tighter text-white lg:text-base ">{"Request Body Type : application/json"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
+        // {
+        //   "role_id": "id role for assign user",
+        // }
 
-                        "#}
-                        </code>
-                    </pre>          
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>          
+        //           </div>
                   
-                  // Request Headers Section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // Request Headers Section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
 
-        "access_token": "value from field 'token' on method POST /login"
+        // "access_token": "value from field 'token' on method POST /login"
 
                         
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
 
-                  // request parameter section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Parameters Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // request parameter section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Parameters Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
-        endpoint: /api/v2/users/{id}/roles
-        example: /api/v2/users/AaiyAPdpYdesoKnqjj8HJqRn4T5titww/roles
+        // endpoint: /api/v2/users/{id}/roles
+        // example: /api/v2/users/AaiyAPdpYdesoKnqjj8HJqRn4T5titww/roles
 
-        "id": "id of User"
+        // "id": "id of User"
 
         
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
                   
-                  // Response section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // Response section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
-        Status Code 201 - Created
+        // Status Code 201 - Created
 
-        {
-          "message": "User successfully assigned a role",
-          "data": ""
-        }
+        // {
+        //   "message": "User successfully assigned a role",
+        //   "data": ""
+        // }
 
-        Status Code 400 - Bad Request
+        // Status Code 400 - Bad Request
 
-        {
-          "message": "Parse error",
-          "data": ""
-        }
+        // {
+        //   "message": "Parse error",
+        //   "data": ""
+        // }
 
-        Status Code 403 - Forbidden
+        // Status Code 403 - Forbidden
 
-        {
-          "message": "You dont have access to this data",
-          "data": ""
-        }
+        // {
+        //   "message": "You dont have access to this data",
+        //   "data": ""
+        // }
 
-        Status Code 404 - Not Found
+        // Status Code 404 - Not Found
 
-        {
-          "message": "Users not found",
-          "data": ""
-        }
+        // {
+        //   "message": "Users not found",
+        //   "data": ""
+        // }
 
-        Status Code 500 - Internal Server Error
+        // Status Code 500 - Internal Server Error
 
-        {
-          "message": "Internal Server Error",
-          "data": ""
-        }
+        // {
+        //   "message": "Internal Server Error",
+        //   "data": ""
+        // }
 
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
-                </div>
-              </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
+        //         </div>
+        //       </div>
 
               // Delete a User Role
-              <div class="grid grid-cols-2">
-                // description
-                <div class="relative items-center w-full mx-auto">
-                  <div class="grid grid-cols-1 ">
-                    <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
-                      <div class="p-4">
-                        <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Removes roles from a user"}</h4>
-                        <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-red-400 rounded-full">{"DELETE"}</span>
-                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/users/{id_users}/role/{id_role}"}</span>
-                        <p class="mt-3 text-base leading-relaxed text-gray-500">
-                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"Remove roles from a user."}</span>
-                        </p>
-                        </div>
-                      </div>
-                    </div>
-                </div>
+        //       <div class="grid grid-cols-2">
+        //         // description
+        //         <div class="relative items-center w-full mx-auto">
+        //           <div class="grid grid-cols-1 ">
+        //             <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
+        //               <div class="p-4">
+        //                 <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Removes roles from a user"}</h4>
+        //                 <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-red-400 rounded-full">{"DELETE"}</span>
+        //                 <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/users/{id_users}/role/{id_role}"}</span>
+        //                 <p class="mt-3 text-base leading-relaxed text-gray-500">
+        //                 <span class="mt-3 text-base leading-relaxed text-gray-500">{"Remove roles from a user."}</span>
+        //                 </p>
+        //                 </div>
+        //               </div>
+        //             </div>
+        //         </div>
                 
-                // response section
-                <div class="relative items-center w-full mx-auto bg-gray-500">
-                  // Request body section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-lg">
-                        {r#"
+        //         // response section
+        //         <div class="relative items-center w-full mx-auto bg-gray-500">
+        //           // Request body section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-lg">
+        //                 {r#"
 
 
 
-        No Request Body Required
+        // No Request Body Required
                         
                         
 
-                        "#}
-                        </code>
-                    </pre>      
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>      
+        //           </div>
                   
-                  // Request Headers Section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // Request Headers Section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
 
-        "access_token": "value from field 'token' on method POST /login"
+        // "access_token": "value from field 'token' on method POST /login"
 
                         
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
                   
-                  // request parameter section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Parameters Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // request parameter section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Parameters Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
-        endpoint: /api/v2/users/{id_users}/role/{id_role}
-        example: /api/v2/users/AaiyAPdpYdesoKnqjj8HJqRn4T5titww/role/1
+        // endpoint: /api/v2/users/{id_users}/role/{id_role}
+        // example: /api/v2/users/AaiyAPdpYdesoKnqjj8HJqRn4T5titww/role/1
 
-        "id_users": "id of a users"
-        "id_role": "id of a role"
+        // "id_users": "id of a users"
+        // "id_role": "id of a role"
 
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
                   
-                  // Response section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // Response section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
-        Status Code 200 - Ok
+        // Status Code 200 - Ok
 
-        {
-          "message": "User successfully removed from role",
-          "data": ""
-        }
+        // {
+        //   "message": "User successfully removed from role",
+        //   "data": ""
+        // }
 
-        Status Code 400 - Bad request
+        // Status Code 400 - Bad request
         
-        {
-          "message": "Parse error",
-          "data": ""
-        }
+        // {
+        //   "message": "Parse error",
+        //   "data": ""
+        // }
 
-        Status Code 403 - Forbidden
+        // Status Code 403 - Forbidden
         
-        {
-          "message": "You dont have access to this data",
-          "data": ""
-        }
+        // {
+        //   "message": "You dont have access to this data",
+        //   "data": ""
+        // }
 
-        Status Code 404 - Not Found
+        // Status Code 404 - Not Found
         
-        {
-          "message": "Users / roles not found",
-          "data": ""
-        }
+        // {
+        //   "message": "Users / roles not found",
+        //   "data": ""
+        // }
 
-        Status Code 500 - Internal Server Error
+        // Status Code 500 - Internal Server Error
         
-        {
-          "message": "Internal Server Error",
-          "data": ""
-        }
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        // {
+        //   "message": "Internal Server Error",
+        //   "data": ""
+        // }
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
 
-                </div>
-              </div>
+        //         </div>
+        //       </div>
 
-              // Create and Assign Permissions to a User
-              <div class="grid grid-cols-2">
-                // description
-                <div class="relative items-center w-full mx-auto">
-                  <div class="grid grid-cols-1 ">
-                    <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
-                      <div class="p-4">
-                        <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Assign Permissions to a User"}</h4>
-                        <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-green-400 rounded-full">{"POST"}</span>
-                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/users/{id}/permissions"}</span>
-                        <p class="mt-3 text-base leading-relaxed text-gray-500">
-                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"Assign permissions to a user."}</span>
-                        </p>
-                        </div>
-                      </div>
-                    </div>
-                </div>
+        //       // Create and Assign Permissions to a User
+        //       <div class="grid grid-cols-2">
+        //         // description
+        //         <div class="relative items-center w-full mx-auto">
+        //           <div class="grid grid-cols-1 ">
+        //             <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
+        //               <div class="p-4">
+        //                 <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Assign Permissions to a User"}</h4>
+        //                 <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-green-400 rounded-full">{"POST"}</span>
+        //                 <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/users/{id}/permissions"}</span>
+        //                 <p class="mt-3 text-base leading-relaxed text-gray-500">
+        //                 <span class="mt-3 text-base leading-relaxed text-gray-500">{"Assign permissions to a user."}</span>
+        //                 </p>
+        //                 </div>
+        //               </div>
+        //             </div>
+        //         </div>
                 
-                // response section
-                <div class="relative items-center w-full mx-auto bg-gray-500">
-                  // Request body section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
-                      <h4 class="text-base font-medium leading-none text-yellow-500 tracking-tighter text-white lg:text-base ">{"Request Body Type : application/json"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
-        {
-          "id's": [integer],
-        }
-                        "#}
-                        </code>
-                    </pre>          
-                  </div>
+        //         // response section
+        //         <div class="relative items-center w-full mx-auto bg-gray-500">
+        //           // Request body section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
+        //               <h4 class="text-base font-medium leading-none text-yellow-500 tracking-tighter text-white lg:text-base ">{"Request Body Type : application/json"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
+        // {
+        //   "id's": [integer],
+        // }
+        //                 "#}
+        //                 </code>
+        //             </pre>          
+        //           </div>
                   
-                  // Request Headers Section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // Request Headers Section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
 
-        "access_token": "value from field 'token' on method POST /login"
+        // "access_token": "value from field 'token' on method POST /login"
 
                         
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
 
-                  // request parameter section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Parameters Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // request parameter section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Parameters Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
-        endpoint: /api/v2/users/{id}/permissions
-        example: /api/v2/users/AaiyAPdpYdesoKnqjj8HJqRn4T5titww/permissions
+        // endpoint: /api/v2/users/{id}/permissions
+        // example: /api/v2/users/AaiyAPdpYdesoKnqjj8HJqRn4T5titww/permissions
 
-        "id": "id of User"
+        // "id": "id of User"
 
         
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
                   
-                  // Response section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // Response section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
-        Status Code 201 - Created
+        // Status Code 201 - Created
 
-        {
-          "message": "Successfullly assign Permissions",
-          "data": {
-            "id": 1,
-            "api_id": 1,
-            "user_id": 1,
-            "permission_name": "name permission",
-            "description": "description permission"
-          }
-        }
+        // {
+        //   "message": "Successfullly assign Permissions",
+        //   "data": {
+        //     "id": 1,
+        //     "api_id": 1,
+        //     "user_id": 1,
+        //     "permission_name": "name permission",
+        //     "description": "description permission"
+        //   }
+        // }
 
-        Status Code 400 - Bad Request
+        // Status Code 400 - Bad Request
 
-        {
-          "message": "Parse error",
-          "data": ""
-        }
+        // {
+        //   "message": "Parse error",
+        //   "data": ""
+        // }
 
-        Status Code 403 - Forbidden
+        // Status Code 403 - Forbidden
 
-        {
-          "message": "You dont have access to this data",
-          "data": ""
-        }
+        // {
+        //   "message": "You dont have access to this data",
+        //   "data": ""
+        // }
 
-        Status Code 404 - Not Found
+        // Status Code 404 - Not Found
 
-        {
-          "message": "Users not found",
-          "data": ""
-        }
+        // {
+        //   "message": "Users not found",
+        //   "data": ""
+        // }
 
-        Status Code 500 - Internal Server Error
+        // Status Code 500 - Internal Server Error
 
-        {
-          "message": "Internal Server Error",
-          "data": ""
-        }
+        // {
+        //   "message": "Internal Server Error",
+        //   "data": ""
+        // }
 
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
-                </div>
-              </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
+        //         </div>
+        //       </div>
 
               // Get a User's Permissions Section
-              <div class="grid grid-cols-2">
-                // description
-                <div class="relative items-center w-full mx-auto">
-                  <div class="grid grid-cols-1 ">
-                    <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
-                      <div class="p-4">
-                        <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Retrieve all permissions associated with the user."}</h4>
-                        <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-violet-400 rounded-full">{"GET"}</span>
-                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/users/{id}/permissions"}</span>
-                        <p class="mt-3 text-base leading-relaxed text-gray-500">
-                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"Retrieve all permissions associated with the user."}</span>
-                        </p>
-                        </div>
-                      </div>
-                    </div>
-                </div>
+        //       <div class="grid grid-cols-2">
+        //         // description
+        //         <div class="relative items-center w-full mx-auto">
+        //           <div class="grid grid-cols-1 ">
+        //             <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
+        //               <div class="p-4">
+        //                 <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Retrieve all permissions associated with the user."}</h4>
+        //                 <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-violet-400 rounded-full">{"GET"}</span>
+        //                 <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/users/{id}/permissions"}</span>
+        //                 <p class="mt-3 text-base leading-relaxed text-gray-500">
+        //                 <span class="mt-3 text-base leading-relaxed text-gray-500">{"Retrieve all permissions associated with the user."}</span>
+        //                 </p>
+        //                 </div>
+        //               </div>
+        //             </div>
+        //         </div>
                 
-                // response section
-                <div class="relative items-center w-full mx-auto bg-gray-500">
-                  // Request body section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-lg">
-                        {r#"
+        //         // response section
+        //         <div class="relative items-center w-full mx-auto bg-gray-500">
+        //           // Request body section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-lg">
+        //                 {r#"
 
 
 
-        No Request Body Required
+        // No Request Body Required
                         
                         
 
-                        "#}
-                        </code>
-                    </pre>      
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>      
+        //           </div>
                   
-                  // Request Headers Section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // Request Headers Section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
 
-        "access_token": "value from field 'token' on method POST /login"
+        // "access_token": "value from field 'token' on method POST /login"
 
                         
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
                   
-                  // request parameter section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Parameters Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // request parameter section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Parameters Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
-        endpoint: /api/v2/users/{id}/permissions
-        example: /api/v2/users/AaiyAPdpYdesoKnqjj8HJqRn4T5titww/permissions
+        // endpoint: /api/v2/users/{id}/permissions
+        // example: /api/v2/users/AaiyAPdpYdesoKnqjj8HJqRn4T5titww/permissions
 
-        "id": "id of User"
+        // "id": "id of User"
 
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
                   
-                  // Response section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // Response section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
-        Status Code 200 - Ok
+        // Status Code 200 - Ok
 
-        {
-          "message": "Succesfully get all Permissions",
-          "data": [
-            {
-              "id": 1,
-              "permission_name": "name permission",
-              "description": "description permission",
-              "api_name": "name api"
-            },
-            {
-              "id": 2,
-              "permission_name": "name permission",
-              "description": "description permission",
-              "api_name": "name api"
-            },
-          ]
-        }
+        // {
+        //   "message": "Succesfully get all Permissions",
+        //   "data": [
+        //     {
+        //       "id": 1,
+        //       "permission_name": "name permission",
+        //       "description": "description permission",
+        //       "api_name": "name api"
+        //     },
+        //     {
+        //       "id": 2,
+        //       "permission_name": "name permission",
+        //       "description": "description permission",
+        //       "api_name": "name api"
+        //     },
+        //   ]
+        // }
 
-        Status Code 403 - Forbidden
+        // Status Code 403 - Forbidden
         
-        {
-          "message": "You dont have access to this data",
-          "data": ""
-        }
+        // {
+        //   "message": "You dont have access to this data",
+        //   "data": ""
+        // }
 
-        Status Code 404 - Not Found
+        // Status Code 404 - Not Found
         
-        {
-          "message": "Users not found",
-          "data": ""
-        }
+        // {
+        //   "message": "Users not found",
+        //   "data": ""
+        // }
 
-        Status Code 500 - Internal Server Error
+        // Status Code 500 - Internal Server Error
         
-        {
-          "message": "Internal Server Error",
-          "data": ""
-        }
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        // {
+        //   "message": "Internal Server Error",
+        //   "data": ""
+        // }
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
 
-                </div>
-              </div>
+        //         </div>
+        //       </div>
 
-              // Delete a User permissions 
-              <div class="grid grid-cols-2">
-                // description
-                <div class="relative items-center w-full mx-auto">
-                  <div class="grid grid-cols-1 ">
-                    <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
-                      <div class="p-4">
-                        <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Remove Permissions from a User"}</h4>
-                        <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-red-400 rounded-full">{"DELETE"}</span>
-                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/users/{id_users}/permissions/{id_permission}"}</span>
-                        <p class="mt-3 text-base leading-relaxed text-gray-500">
-                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"Remove permissions from a user."}</span>
-                        </p>
-                        </div>
-                      </div>
-                    </div>
-                </div>
+        //       // Delete a User permissions 
+        //       <div class="grid grid-cols-2">
+        //         // description
+        //         <div class="relative items-center w-full mx-auto">
+        //           <div class="grid grid-cols-1 ">
+        //             <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
+        //               <div class="p-4">
+        //                 <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Remove Permissions from a User"}</h4>
+        //                 <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-red-400 rounded-full">{"DELETE"}</span>
+        //                 <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/users/{id_users}/permissions/{id_permission}"}</span>
+        //                 <p class="mt-3 text-base leading-relaxed text-gray-500">
+        //                 <span class="mt-3 text-base leading-relaxed text-gray-500">{"Remove permissions from a user."}</span>
+        //                 </p>
+        //                 </div>
+        //               </div>
+        //             </div>
+        //         </div>
                 
-                // response section
-                <div class="relative items-center w-full mx-auto bg-gray-500">
-                  // Request body section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-lg">
-                        {r#"
+        //         // response section
+        //         <div class="relative items-center w-full mx-auto bg-gray-500">
+        //           // Request body section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-lg">
+        //                 {r#"
 
 
 
-        No Request Body Required
+        // No Request Body Required
                         
                         
 
-                        "#}
-                        </code>
-                    </pre>      
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>      
+        //           </div>
                   
-                  // Request Headers Section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // Request Headers Section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
 
-        "access_token": "value from field 'token' on method POST /login"
+        // "access_token": "value from field 'token' on method POST /login"
 
                         
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
                   
-                  // request parameter section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Parameters Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // request parameter section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Parameters Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
-        endpoint: /api/v2/users/{id_users}/permissions/{id_permission}
-        example: /api/v2/users//role/1 /api/v2/users/{AaiyAPdpYdesoKnqjj8HJqRn4T5titww}/permissions/1
+        // endpoint: /api/v2/users/{id_users}/permissions/{id_permission}
+        // example: /api/v2/users//role/1 /api/v2/users/{AaiyAPdpYdesoKnqjj8HJqRn4T5titww}/permissions/1
 
-        "id_users": "id of a users"
-        "id_permission": "id of permission"
+        // "id_users": "id of a users"
+        // "id_permission": "id of permission"
 
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
                   
-                  // Response section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // Response section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
-        Status Code 200 - Ok
+        // Status Code 200 - Ok
 
-        {
-          "message": "Successfully unassign Permission from User",
-          "data": {
-            "id": 1,
-            "api_id": 1,
-            "user_id": null,
-            "permission_name": "name permission",
-            "description": "description permission"
-          }
-        }
+        // {
+        //   "message": "Successfully unassign Permission from User",
+        //   "data": {
+        //     "id": 1,
+        //     "api_id": 1,
+        //     "user_id": null,
+        //     "permission_name": "name permission",
+        //     "description": "description permission"
+        //   }
+        // }
 
-        Status Code 400 - Bad request
+        // Status Code 400 - Bad request
         
-        {
-          "message": "Parse error",
-          "data": ""
-        }
+        // {
+        //   "message": "Parse error",
+        //   "data": ""
+        // }
 
-        Status Code 403 - Forbidden
+        // Status Code 403 - Forbidden
         
-        {
-          "message": "You dont have access to this data",
-          "data": ""
-        }
+        // {
+        //   "message": "You dont have access to this data",
+        //   "data": ""
+        // }
 
-        Status Code 404 - Not Found
+        // Status Code 404 - Not Found
         
-        {
-          "message": "Users / permission not found",
-          "data": ""
-        }
+        // {
+        //   "message": "Users / permission not found",
+        //   "data": ""
+        // }
 
-        Status Code 500 - Internal Server Error
+        // Status Code 500 - Internal Server Error
         
-        {
-          "message": "Internal Server Error",
-          "data": ""
-        }
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        // {
+        //   "message": "Internal Server Error",
+        //   "data": ""
+        // }
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
 
-                </div>
-              </div>
+        //         </div>
+        //       </div>
 
-              // get All Roles
-              <div class="grid grid-cols-2">
-                // description
-                <div class="relative items-center w-full mx-auto">
-                  <div class="grid grid-cols-1 ">
-                    <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
-                      <div class="p-4">
-                        <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Get roles"}</h4>
-                        <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-violet-400 rounded-full">{"GET"}</span>
-                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/roles"}</span>
-                        <p class="mt-3 text-base leading-relaxed text-gray-500">
-                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"Retrieve filtered list of roles that can be assigned to users."}</span>
-                        </p>
-                        </div>
-                      </div>
-                    </div>
-                </div>
+        //       // get All Roles
+        //       <div class="grid grid-cols-2">
+        //         // description
+        //         <div class="relative items-center w-full mx-auto">
+        //           <div class="grid grid-cols-1 ">
+        //             <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
+        //               <div class="p-4">
+        //                 <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Get roles"}</h4>
+        //                 <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-violet-400 rounded-full">{"GET"}</span>
+        //                 <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/roles"}</span>
+        //                 <p class="mt-3 text-base leading-relaxed text-gray-500">
+        //                 <span class="mt-3 text-base leading-relaxed text-gray-500">{"Retrieve filtered list of roles that can be assigned to users."}</span>
+        //                 </p>
+        //                 </div>
+        //               </div>
+        //             </div>
+        //         </div>
                 
-                // response section
-                <div class="relative items-center w-full mx-auto bg-gray-500">
-                  // Request body section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-lg">
-                        {r#"
+        //         // response section
+        //         <div class="relative items-center w-full mx-auto bg-gray-500">
+        //           // Request body section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-lg">
+        //                 {r#"
 
 
 
-        No Request Body Required
+        // No Request Body Required
                         
                         
 
-                        "#}
-                        </code>
-                    </pre>      
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>      
+        //           </div>
                   
-                  // Request Headers Section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // Request Headers Section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
 
-        "access_token": "value from field 'token' on method POST /login"
+        // "access_token": "value from field 'token' on method POST /login"
 
                         
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
                   
-                  // Response section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // Response section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
-        Status Code 200 - Ok
+        // Status Code 200 - Ok
 
-        {
-          "message": "Succesfully get all Roles",
-            "data": [
-              {
-                "id": 1,
-                "name": "name role",
-                "description": "description role"
-              },
-              {
-                "id": 2,
-                "name": "name role",
-                "description": "description role"
-              }
-            ]
-        }
+        // {
+        //   "message": "Succesfully get all Roles",
+        //     "data": [
+        //       {
+        //         "id": 1,
+        //         "name": "name role",
+        //         "description": "description role"
+        //       },
+        //       {
+        //         "id": 2,
+        //         "name": "name role",
+        //         "description": "description role"
+        //       }
+        //     ]
+        // }
 
-        Status Code 403 - Forbidden
+        // Status Code 403 - Forbidden
 
-        {
-          "message": "You dont have access to this data",
-          "data": ""
-        }
+        // {
+        //   "message": "You dont have access to this data",
+        //   "data": ""
+        // }
 
-        Status Code 500 - Internal Server Error
+        // Status Code 500 - Internal Server Error
 
-        {
-          "message": "Internal Server Error",
-          "data": ""
-        }
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        // {
+        //   "message": "Internal Server Error",
+        //   "data": ""
+        // }
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
 
-                </div>
-              </div>
+        //         </div>
+        //       </div>
 
-              //create A Role
-              <div class="grid grid-cols-2">
-                // description
-                <div class="relative items-center w-full mx-auto">
-                  <div class="grid grid-cols-1 ">
-                    <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
-                      <div class="p-4">
-                        <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Create a role"}</h4>
-                        <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-green-400 rounded-full">{"POST"}</span>
-                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/roles"}</span>
-                        <p class="mt-3 text-base leading-relaxed text-gray-500">
-                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"Create a new role."}</span>
-                        </p>
-                        </div>
-                      </div>
-                    </div>
-                </div>
+        //       //create A Role
+        //       <div class="grid grid-cols-2">
+        //         // description
+        //         <div class="relative items-center w-full mx-auto">
+        //           <div class="grid grid-cols-1 ">
+        //             <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
+        //               <div class="p-4">
+        //                 <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Create a role"}</h4>
+        //                 <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-green-400 rounded-full">{"POST"}</span>
+        //                 <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/roles"}</span>
+        //                 <p class="mt-3 text-base leading-relaxed text-gray-500">
+        //                 <span class="mt-3 text-base leading-relaxed text-gray-500">{"Create a new role."}</span>
+        //                 </p>
+        //                 </div>
+        //               </div>
+        //             </div>
+        //         </div>
                 
-                // response section
-                <div class="relative items-center w-full mx-auto bg-gray-500">
-                  // Request body section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
-                      <h4 class="text-base font-medium leading-none text-yellow-500 tracking-tighter text-white lg:text-base ">{"Request Body Type : application/json"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
-        {
-          "name": "name role",
-          "description": "description role",
-        }
-                        "#}
-                        </code>
-                    </pre>          
-                  </div>
+        //         // response section
+        //         <div class="relative items-center w-full mx-auto bg-gray-500">
+        //           // Request body section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
+        //               <h4 class="text-base font-medium leading-none text-yellow-500 tracking-tighter text-white lg:text-base ">{"Request Body Type : application/json"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
+        // {
+        //   "name": "name role",
+        //   "description": "description role",
+        // }
+        //                 "#}
+        //                 </code>
+        //             </pre>          
+        //           </div>
                   
-                  // Request Headers Section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // Request Headers Section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
 
-        "access_token": "value from field 'token' on method POST /login"
+        // "access_token": "value from field 'token' on method POST /login"
 
                         
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
                   
-                  // Response section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // Response section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
-        Status Code 201 - Created
+        // Status Code 201 - Created
 
-        {
-          "message": "Successfullly create Role",
-          "data": {
-            "id": 1,
-            "role_id": "role id",
-            "name": "name role",
-            "description": "description role",
-            "tenant_id": 1
-          }
-        }
+        // {
+        //   "message": "Successfullly create Role",
+        //   "data": {
+        //     "id": 1,
+        //     "role_id": "role id",
+        //     "name": "name role",
+        //     "description": "description role",
+        //     "tenant_id": 1
+        //   }
+        // }
 
-        Status Code 400 - Bad Request
+        // Status Code 400 - Bad Request
 
-        {
-          "message": "Parse error",
-          "data": ""
-        }
+        // {
+        //   "message": "Parse error",
+        //   "data": ""
+        // }
 
-        Status Code 403 - Forbidden
+        // Status Code 403 - Forbidden
 
-        {
-          "message": "You dont have access to this data",
-          "data": ""
-        }
+        // {
+        //   "message": "You dont have access to this data",
+        //   "data": ""
+        // }
 
-        Status Code 500 - Internal Server Error
+        // Status Code 500 - Internal Server Error
 
-        {
-          "message": "Internal Server Error",
-          "data": ""
-        }
+        // {
+        //   "message": "Internal Server Error",
+        //   "data": ""
+        // }
 
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
 
-                </div>
-              </div>
+        //         </div>
+        //       </div>
 
-              // Get Detail Roles Section
-              <div class="grid grid-cols-2">
-                // description
-                <div class="relative items-center w-full mx-auto">
-                  <div class="grid grid-cols-1 ">
-                    <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
-                      <div class="p-4">
-                        <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Get a role"}</h4>
-                        <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-violet-400 rounded-full">{"GET"}</span>
-                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/roles/{id}"}</span>
-                        <p class="mt-3 text-base leading-relaxed text-gray-500">
-                        <span class="mt-3 text-base leading-relaxed text-gray-500">{"Retrieve a role."}</span>
-                        </p>
-                        </div>
-                      </div>
-                    </div>
-                </div>
+        //       // Get Detail Roles Section
+        //       <div class="grid grid-cols-2">
+        //         // description
+        //         <div class="relative items-center w-full mx-auto">
+        //           <div class="grid grid-cols-1 ">
+        //             <div class="w-full h-max max-w-lg mx-auto my-4 bg-white">
+        //               <div class="p-4">
+        //                 <h4 class="text-2xl my-2 font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl ">{"Get a role"}</h4>
+        //                 <span class="inline-flex items-center justify-center px-2 py-1 mr-2 text-xs font-semibold leading-none text-white bg-violet-400 rounded-full">{"GET"}</span>
+        //                 <span class="mt-3 text-base leading-relaxed text-gray-500">{"/api/v2/roles/{id}"}</span>
+        //                 <p class="mt-3 text-base leading-relaxed text-gray-500">
+        //                 <span class="mt-3 text-base leading-relaxed text-gray-500">{"Retrieve a role."}</span>
+        //                 </p>
+        //                 </div>
+        //               </div>
+        //             </div>
+        //         </div>
                 
-                // response section
-                <div class="relative items-center w-full mx-auto bg-gray-500">
-                  // Request body section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-lg">
-                        {r#"
+        //         // response section
+        //         <div class="relative items-center w-full mx-auto bg-gray-500">
+        //           // Request body section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Body Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-lg">
+        //                 {r#"
 
 
 
-        No Request Body Required
+        // No Request Body Required
                         
                         
 
-                        "#}
-                        </code>
-                    </pre>      
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>      
+        //           </div>
                   
-                  // Request Headers Section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // Request Headers Section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Headers Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
 
-        "access_token": "value from field 'token' on method POST /login"
+        // "access_token": "value from field 'token' on method POST /login"
 
                         
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
                   
-                  // request parameter section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Parameters Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // request parameter section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Request Parameters Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
-        endpoint: /api/v2/roles/{id}
-        example: /api/v2/roles/AaiyAPdpYdesoKnqjj8HJqRn4T5titww
+        // endpoint: /api/v2/roles/{id}
+        // example: /api/v2/roles/AaiyAPdpYdesoKnqjj8HJqRn4T5titww
 
 
-        "id": "id of Role"
+        // "id": "id of Role"
 
         
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
                   
-                  // Response section
-                  <div>
-                    <div class="p-4">
-                      <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
-                    </div>
-                    <pre>
-                      <code class="json text-xs">
-                        {r#"
+        //           // Response section
+        //           <div>
+        //             <div class="p-4">
+        //               <h4 class="my-2 text-lg p-5 font-medium leading-none tracking-tighter text-white lg:text-lg ">{"Response Example"}</h4>
+        //             </div>
+        //             <pre>
+        //               <code class="json text-xs">
+        //                 {r#"
 
-        Status Code 200 - Ok
+        // Status Code 200 - Ok
 
-        {
-          "message": "Successfullly get Role",
-          "data": {
-            "id": 1,
-            "role_id": "role id",
-            "name": "name role",
-            "description": "description role",
-            "tenant_id": 1
-          }
-        }
+        // {
+        //   "message": "Successfullly get Role",
+        //   "data": {
+        //     "id": 1,
+        //     "role_id": "role id",
+        //     "name": "name role",
+        //     "description": "description role",
+        //     "tenant_id": 1
+        //   }
+        // }
 
 
-        Status Code 403 - Forbidden
+        // Status Code 403 - Forbidden
         
-        {
-          "message": "You dont have access to this data",
-          "data": ""
-        }
+        // {
+        //   "message": "You dont have access to this data",
+        //   "data": ""
+        // }
 
-        Status Code 404 - Not Found
+        // Status Code 404 - Not Found
         
-        {
-          "message": "Role not found",
-          "data": ""
-        }
+        // {
+        //   "message": "Role not found",
+        //   "data": ""
+        // }
 
-        Status Code 500 - Internal Server Error
+        // Status Code 500 - Internal Server Error
         
-        {
-          "message": "Internal Server Error",
-          "data": ""
-        }
-                        "#}
-                        </code>
-                    </pre>        
-                  </div>
+        // {
+        //   "message": "Internal Server Error",
+        //   "data": ""
+        // }
+        //                 "#}
+        //                 </code>
+        //             </pre>        
+        //           </div>
 
-                </div>
-              </div>
+        //         </div>
+        //       </div>
 
         //       <div class="grid grid-cols-2">
         //         // description
@@ -3849,6 +3849,7 @@ pub fn app() -> Html {
         // {
         //   "message": "User name updated successfully",
         //   "data": ""
+
         // }
 
         // Status Code 403 - Forbidden
